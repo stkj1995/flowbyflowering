@@ -1,0 +1,33 @@
+---
+import Button from '../components/Button.astro';
+import { Image } from 'astro:assets';
+import rødblomst from '../assets/images/rødblomst.svg'
+import lyserødblomst from '../assets/images/lyserødblomst1.svg'
+---
+
+<section class="bg-beige-500 w-full">
+
+<div class="alt place-content-center md:flex md:flex-row">
+
+<div class="place-self-center pt-16 pb-10 relative left-2">
+    <Image src={rødblomst} alt='illustration af en rød blomst' class="">
+</div>
+<!-- text -->
+<div class="text-center pt-5 md:relative md:top-28">
+    <h2>Din hverdag fortjener blomster</h2>
+    <p class="px-24 pt-8">Vælg et af vores abonnementer, og få bæredygtige buketter leveret direkte til døren. 
+        <br> Nemt, fleksibelt og med omtanke for miljøet.</p>
+<!-- erstatning for knap -->
+<div class="text-center pt-6">
+    <p>knap</p>
+</div>
+</div>
+
+<div class="place-self-center pt-16 pb-16">
+    <Image src={lyserødblomst} alt='illustration af en rød blomst' class="">
+</div>
+</div>
+
+
+
+</section>
