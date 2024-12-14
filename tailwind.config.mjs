@@ -73,7 +73,10 @@ export default {
         /* Fonte */
         fontFamily: {
           WindstoneSerif: ["WindstoneSerif", "serif"],
-          Livvic: ["Livvic", "sans-serif"],
+          LivvicRegular: ["Regular", "sans-serif"],
+          LivvicMedium: ["Medium", "sans-serif"],
+          LivvicBold: ["Bold", "sans-serif"],
+          LivvicItalic: ["Italic", "sans-serif"],
         },
   
         /* Typografisk hierarki */
