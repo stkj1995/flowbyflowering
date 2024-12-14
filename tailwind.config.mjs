@@ -92,9 +92,16 @@ export default {
   
         /* Fontvægt */
         fontWeight: {
-          regular: "400",
-          medium: "500",
-          bold: "700",
+          regular: "400", //generel paragraph
+          medium: "500", //steps i cards
+          bold: "700", //highlights i tekst
+        },
+
+        
+
+        /* Text-transform */
+        textTransform: {
+          uppercase: "uppercase"
         },
   
         /* Border størrelser */
