@@ -71,12 +71,10 @@ export default {
         },
   
         /* Fonte */
-        // fontFamily: {
-        //   onestBlack: ["Onest-Black", "sans-serif"],
-        //   onestRegular: ["Onest-Regular", "sans-serif"],
-        //   albert: ["Albert Sans", "sans-serif"],
-        //   londrina: ["Londrina Solid", "sans-serif"],
-        // },
+        fontFamily: {
+          WindstoneSerif: ["WindstoneSerif", "serif"],
+          Livvic: ["Livvic", "sans-serif"],
+        },
   
         /* Typografisk hierarki */
         // fontSize: {
