@@ -14,7 +14,7 @@ export default {
             200: "#FCF8F7",
             300: "#FBF4F4",
             400: "#FAF1F0",
-            500: "#F9EFEE", //beige baggrundsfarve
+            500: "#F9EFEE", //beige baggrundsfarve (skriv: bg-beige-500)
             600: "#DFA9A5", 
             700: "#C6665D",
             800: "#8F3A33",
@@ -23,7 +23,7 @@ export default {
           rosa: {
             50: "#FFF", 
             200: "#FFFBFA",
-            500: "#FFF9F8", // rosa sektionsfarve
+            500: "#FFF9F8", // rosa sektionsfarve (skriv: bg-rosa-500)
             600: "#FFA494",
             700: "#FF4D2E",
             800: "#C71E00",
@@ -35,7 +35,7 @@ export default {
             200: "#C4CAD4",
             300: "#A6B0BF",
             400: "#8B98AC",
-            500: "#F9EFEE", // gråblå til mikrokonvertering (sekundære knapper)
+            500: "#F9EFEE", // gråblå til mikrokonvertering (sekundære knapper), (skriv: bg-greyblue-500)
             600: "#58657A", 
             700: "#404A59",
             800: "#2B313B",
@@ -47,39 +47,28 @@ export default {
             200: "#525DFF",
             300: "#0011FA",
             400: "#000BA3",
-            500: "#00054E", // blå til overskrifter 
+            500: "#00054E", // blå til overskrifter (skriv: text-blue-500)
             600: "#00043D", 
             700: "#00032E",
             800: "#00021F",
             900: "#00010F",
           },
           darkgreyblue: {
-            500: "#505379", // mørk gråblå til brødtekst
+            500: "#505379", // mørk gråblå til brødtekst (skriv: text-darkgreyblue-500)
           },
           denimblue: {
-            500: "#2B3D5A", // denimblå til makrokonvertering (primære knapper)
+            500: "#2B3D5A", // denimblå til makrokonvertering (primære knapper), (skriv: bg-denimblue-500)
           }
         },     
   
         /* Spacing */
-        // spacing: {
-        //   "spacing-none": "0",
-        //   xs: "15px",
-        //   s: "20px",
-        //   sm: "30px",
-        //   m: "42px",
-        //   ml: "49px",
-        //   lg: "60px",
-        //   xl: "75px",
-        //   "1xl": "88px",
-        //   "2xl": "96px",
-        //   "3xl": "107px",
-        //   "4xl": "120px",
-        //   "5xl": "132px",
-        //   "6xl": "148px",
-        //   "7xl": "152px",
-        //   "8xl": "162px",
-        // },
+        spacing: {
+          "spacing-none": "0",
+          sm: "30px", // 30x i spacing IMELLEM OVERSKRIFT, UNDEROVERSKRIFT OG BRØDTEKST
+          m: "40px", // 40x i spacing IMELLEM OVERSKRIFT, UNDEROVERSKRIFT OG BRØDTEKST
+          lg: "80px", // 80x i spacing I ÅBEN BURGERMENU
+          xl: "120px", // Evt. 120x spacing imellem sektioner
+        },
   
         /* Fonte */
         // fontFamily: {
