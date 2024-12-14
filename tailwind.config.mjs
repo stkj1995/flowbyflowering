@@ -72,11 +72,11 @@ export default {
   
         /* Fonte */
         fontFamily: {
-          WindstoneSerif: ["WindstoneSerif", "serif"],
-          LivvicRegular: ["Regular", "sans-serif"],
-          LivvicMedium: ["Medium", "sans-serif"],
-          LivvicBold: ["Bold", "sans-serif"],
-          LivvicItalic: ["Italic", "sans-serif"],
+          WindstoneSerif: ["WindstoneSerif", "serif"], //H1, H1 uppercase, H2, H3
+          LivvicRegular: ["Regular", "sans-serif"], //Paragraph generelt
+          LivvicMedium: ["Medium", "sans-serif"], //Paragraph medium (steps i card)
+          LivvicBold: ["Bold", "sans-serif"], //Paragraph bold (highlights i tekst)
+          LivvicItalic: ["Italic", "sans-serif"], //Paragraph italic (citat i anmeldelser)
         },
   
         /* Typografisk hierarki */
@@ -99,12 +99,12 @@ export default {
 
         /* FontStyle */
         fontStyle: {
-          italic: "italic",
+          italic: "italic", //citater
         },
 
         /* Text-transform */
         textTransform: {
-          uppercase: "uppercase",
+          uppercase: "uppercase", //H1 hero
         },
   
         /* Border størrelser */
