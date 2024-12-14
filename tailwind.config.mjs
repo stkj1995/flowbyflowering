@@ -97,11 +97,14 @@ export default {
           bold: "700", //highlights i tekst
         },
 
-        
+        /* FontStyle */
+        fontStyle: {
+          italic: "italic",
+        },
 
         /* Text-transform */
         textTransform: {
-          uppercase: "uppercase"
+          uppercase: "uppercase",
         },
   
         /* Border størrelser */
