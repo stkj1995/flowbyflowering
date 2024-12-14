@@ -98,18 +98,10 @@ export default {
         },
   
         /* Border størrelser */
-        // borderWidth: {
-        //   DEFAULT: "1px",
-        //   0: "0px",
-        //   2: "2px",
-        //   3: "3px",
-        //   sm: "4px",
-        //   md: "8px",
-        //   lg: "16px",
-        //   xl: "32px",
-        //   "2xl": "128px",
-        //   "3xl": "360px",
-        // },
+        borderWidth: {
+          0: "0px",
+          2: "2px", // button-stroke
+        },
   
         /* Border radius størrelser */
         // borderRadius: {
