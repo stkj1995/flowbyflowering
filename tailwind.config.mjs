@@ -80,21 +80,15 @@ export default {
         },
   
         /* Typografisk hierarki */
-        // fontSize: {
-        //   xs: "13px",
-        //   sm: "15px",
-        //   base: "18px",
-        //   lg: "20px",
-        //   xl: "24px",
-        //   "2xl": "32px",
-        //   "3xl": "36px",
-        //   "4xl": "40px",
-        //   "5xl": "44px",
-        //   "6xl": "45px",
-        //   "7xl": "52px",
-        //   "8xl": "64px",
-        //   "9xl": "90px",
-        // },
+        fontSize: {
+          "12": "12px", // Footer Link
+          "16": "16px", // P Footer
+          "20": "20px", // Paragraph
+          "30": "30px", // H3 Mobile
+          "40": "40px", // H2 Mobile + H3 Desktop
+          "50": "50px", // H1 Mobile + H2 Desktop
+          "200": "200px", // H1 Desktop
+        },
   
         /* Fontvægt */
         // fontWeight: {
