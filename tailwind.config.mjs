@@ -104,14 +104,13 @@ export default {
         },
   
         /* Border radius størrelser */
-        // borderRadius: {
-        //   DEFAULT: "1.25rem",
-        //   none: "0px",
-        //   20: "20px",
-        //   30: "30px",
-        //   50: "50px",
-        //   100: "100px",
-        // },
+        borderRadius: {
+          none: "0px",
+          "20": "20px", //sm
+          "30": "30px", //m
+          "40": "40px", //ml
+          "50": "50px", //xl
+        },
       },
     },
     plugins: [
