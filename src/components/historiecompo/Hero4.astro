@@ -3,26 +3,29 @@ import { Image } from 'astro:assets';
 import hero4 from '../assets/images/her4.webp'
 ---
 
-<section class="">
-    <div class="class">
-    <div class="">
-        <img src="/src/assets/images/hero4.webp" alt="">
-        <!-- <Image src={galleri9} alt='illustration af en hvid blomst' class=""> -->
+<section class="relative w-full h-screen ">
+
+    <div class="alt4">
+         <!-- Billedet -->
+    <div class="absolute w-full h-full">
+        <img src="/src/assets/images/hero4.webp" class="w-full h-full object-cover" alt="Billede af hvid blomst">
+    </div>
+
+    <!-- Tekst -->
+    <div class="absolute w-full h-full top-36 pl-20 text-darkgreyblue-500">
+        <h2 class="py-8 pb-10 text-40 font-WindstoneSerif">Vores Historie</h2>
+        <h2 class="pr-24 text-40 font-WindstoneSerif">Blomsterfrøet, der blev til Flowering, blev sået ud fra en dyb kærlighed til blomster og naturens skønhed.</h2>
+    </div>
+
+     <!-- pil -->
+     <div class="absolute left-72 top-[650px]">
+        <img src="/src/assets/images/scoll_pil.webp" alt="Scroll Pil" />
+    </div>
+    
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
 </section>
+   
+
+     <!-- <Image src={galleri9} alt='illustration af en hvid blomst' class=""> -->
