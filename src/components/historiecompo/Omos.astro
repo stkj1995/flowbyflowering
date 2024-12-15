@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import hero4 from '../assets/images/her4.webp'
+import omos from '../../assets/images/omos.webp'
+
 ---
 
 
@@ -19,9 +20,9 @@ import hero4 from '../assets/images/her4.webp'
 
     <!-- img // ret billedernes højde i mobil-->
     <div class="w-full h-auto pl-16 pr-16 pb-10 md:w-[700px] md:h-[650px] md:pt-[35px] md:relative md:right-10">
-        <img src="/src/assets/images/omos.webp" alt="" class="rounded-[40px] w-full h-full object-cover">
-    </div>
-  
+        <Image src={omos} alt='billede af to drenge' class="rounded-[40px] w-full h-full object-cover">
+        </div>
+
 </section>
 
 

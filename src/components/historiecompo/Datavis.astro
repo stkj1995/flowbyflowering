@@ -1,5 +1,6 @@
 ---
-
+import Image from "astro/components/Image.astro"
+import datavisimg from '../../assets/images/datavisimg.webp'
 ---
 
 
@@ -16,7 +17,7 @@
   
       <!-- img // ret billedernes højde i mobil-->
       <div class="w-full h-auto pl-16 pr-16 pb-10 md:w-[600px] md:h-[570px] md:pt-[35px] md:relative md:left-5">
-          <img src="/src/assets/images/datavisimg.webp" alt="" class="rounded-[40px] w-full h-full object-cover md:object-cover">
+        <Image src={datavisimg} alt='datavisualisering med blomst og fod' class="rounded-[40px] w-full h-full object-cover md:object-cover">
       </div>
-    
+
   </section>
