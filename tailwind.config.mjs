@@ -35,7 +35,7 @@ export default {
             200: "#C4CAD4",
             300: "#A6B0BF",
             400: "#8B98AC",
-            500: "#F9EFEE", // gråblå til mikrokonvertering (sekundære knapper), (skriv: bg-greyblue-500)
+            500: "#6D7D96", // gråblå til mikrokonvertering (sekundære knapper), (skriv: bg-greyblue-500)
             600: "#58657A", 
             700: "#404A59",
             800: "#2B313B",
