@@ -5,7 +5,7 @@ import rødblomst from '../assets/images/rødblomst.svg'
 import lyserødblomst from '../assets/images/lyserødblomst1.svg'
 ---
 
-<section class="bg-beige-500 w-full">
+<section class="bg-beige-500 w-full md:pb-12">
 
 <div class="alt place-content-center md:flex md:flex-row">
 
@@ -19,7 +19,21 @@ import lyserødblomst from '../assets/images/lyserødblomst1.svg'
         <br> Nemt, fleksibelt og med omtanke for miljøet.</p>
 <!-- erstatning for knap -->
 <div class="text-center pt-10">
-    <p>knap</p>
+    <a href="/abonnement">
+        <div class="pt-9 ">
+            <!-- <Button variant="primary" size="large">Skræddersy dit blomsterabonnement her</Button> -->
+            <div class="w-96 text-center relative left-[130px]  md:relative md:left-56 md:-top-7 md:w-[450px]">
+                <Button 
+                    textMobile="Bestil dit blomsterabonnement"
+                    textDesktop="Skræddersy dit blomsterabonnement her"
+                    link="/abonnement"
+                    backgroundColor="#2B3D5A"
+                    textColor="#FFF"
+                    size="small md:large"
+                />
+            </div>
+        </div>
+    </a>
 </div>
 </div>
 
