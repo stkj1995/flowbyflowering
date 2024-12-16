@@ -1,26 +1,75 @@
 ---
+import Image from "astro/components/Image.astro"
+import logo from '../assets/images/logo.webp'
 ---
 
+<!-- Navigation -->
+<div x-data="{ open: false }" class="absolute z-50 top-2" 
+     @keydown.escape.window="open = false" 
+     @click.away="open = false"
+     x-bind:class="{ 'overflow-hidden': open }" 
+     @click="document.body.classList.toggle('overflow-hidden', open)">
 
+    <!-- Navigation bar (desktop) -->
+    <nav class="hidden md:flex items-center md:space-x-[720px] px-8 py-4 text-blue-500">
+        <!-- Logo (synligt på desktop) -->
+         <a href="index">
+            <div class="w-[155px] h-[90px]">
+                <!-- Logo  -->
+           <Image src={logo} alt='illustration af blomst med skrift Flow by flowering' class="w-full h-full">
+             </div>
+        </a>
+        <div class="space-x-10">
+            <a href="abonnement" class="font-LivvicBold text-20">Abonnement</a>
+            <a href="baeredygtighed" class="font-LivvicBold text-20">Bæredygtighed</a>
+            <a href="historie" class="font-LivvicBold text-20">Vores historie</a>
+        </div>
+    </nav>
 
+    <!-- Burger menu knap (mobil version) -->
+    <div class="md:hidden flex items-center space-x-[400px] px-6 py-4 text-blue-500">
+        <div class="w-[120px] h-[70px] relative top-1">
+        <!-- Logo (synligt på mobil) -->
+        <Image src={logo} alt='illustration af blomst med skrift Flow by flowering' class="w-full h-full">
+        </div>
 
+        <!-- Burger knap -->
+        <button @click="open = !open" class="focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
 
+    <!-- Mobil Menu -->
+    <div x-show="open" x-transition.duration.300ms class="md:hidden fixed inset-0 bg-[#6D7D96] bg-opacity-100 z-50">
+        <div class="relative top-6">
+             <div class="class">
+            <!-- logo img i burgermenu -->
+            <div class="w-[120px] h-[70px] relative top-4 left-7">
+                <!-- Logo  -->
+                <Image src={logo} alt='illustration af blomst med skrift Flow by flowering' class="w-full h-full">
+                </div>
+            
+            <!-- Knap (X) -->
+            <button @click="open = false" class="absolute top-6 right-10 text-white text-3xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            </div>
+         
 
+            <div class="relative top-28 flex flex-col h-full space-y-28 items-center ">
+            <!-- Links -->
+            <a href="abonnement" @click="open = false" class="text-white font-LivvicBold text-20">Abonnement</a>
+            <a href="baeredygtighed" @click="open = false" class="text-white font-LivvicBold text-20">Bæredygtighed</a>
+            <a href="historie" @click="open = false" class="text-white font-LivvicBold text-20">Vores historie</a>
+            </div>
+         
+        </div>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="max-w-screen-xl mx-auto text-white">
-    Header/Navigation
-</div> -->
-    
+    <!-- Desktop Menu baggrund (fuld skærm) -->
+    <div class="absolute inset-0 bg-gray-800 bg-opacity-50 z-40 md:hidden" x-show="open" x-transition></div>
+</div>
