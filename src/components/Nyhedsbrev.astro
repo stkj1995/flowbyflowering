@@ -6,13 +6,13 @@ import Nyhedsbrev2 from '../assets/images/nyhedsbrev2.png'
 ---
 <script src="https://cdn.tailwindcss.com"></script>
 
-<section class="bg-rosa-500 md:grid md:grid-cols-3 md:gap-10 pt-10 pb-14 px-5 md:px-20">
+<section class="bg-rosa-500 md:grid md:grid-cols-3 md:gap-0 pt-10 pb-20 px-5 md:px-20">
     <!-- Billeder til venstre -->
-    <div class="w-full flex flex-col gap-4">
-      <Image src={Nyhedsbrev1} alt='billede af en holdt buket' class="rounded-40 w-full h-full object-cover md:object-cover">
+    <div class="w-full flex flex-col gap-0">
+      <Image src={Nyhedsbrev1} alt='billede af en holdt buket' class="rounded-40 ml-0 w-96 h-full object-cover md:object-cover">
     </div>
-    <div class="w-full flex flex-col gap-4">
-      <Image src={Nyhedsbrev2} alt='billede af pige med to buketter' class="rounded-40 w-full h-full object-cover md:object-cover">
+    <div class="w-full flex flex-col gap-0">
+      <Image src={Nyhedsbrev2} alt='billede af pige med to buketter' class="mt-60 rounded-40 w-96 h-96 object-cover md:object-cover">
     </div>
   
     <!-- Tekst og formular til højre -->
@@ -48,7 +48,7 @@ import Nyhedsbrev2 from '../assets/images/nyhedsbrev2.png'
         <!-- Knap -->
         <button
           type="submit"
-          class="bg-denimblue-500 text-white text-20 font-LivvicBold py-2 rounded-20 hover:bg-blue-400 transition"
+          class="bg-greyblue-500 text-white text-20 font-LivvicBold py-2 rounded-20 hover:bg-denimblue-500 transition shadow-sm"
         >
           Tilmeld dig vores nyhedsbrev
         </button>
