@@ -1,25 +1,64 @@
 ---
 import Button from '../components/Button.astro';
 import { Image } from 'astro:assets';
+import Nyhedsbrev1 from '../assets/images/nyhedsbrev1.png'
+import Nyhedsbrev2 from '../assets/images/nyhedsbrev2.png'
 ---
 <script src="https://cdn.tailwindcss.com"></script>
 
-<section class="pt-10 pl-5 md:grid md:grid-cols-2 md:px-20 md:pl-16 md:pt-28 md:pb-14 gap-2 bg-rosa-500">
-    <!-- tekst -->
-      <div class="px-8 pl-16 pb-16 text-darkgreyblue-500">
-          <h2 class="pb-6 pt-5 text-40 md:text-50 font-WindstoneSerif">Vil du blomstre med os?</h2>
-          <p class="pr-8 pt-5 text-20 font-LivvicRegular">Få det bedste fra Flowering direkte i din indbakke. Modtag inspiration, tips til blomsterpleje, eksklusive tilbud og nyheder om vores bæredygtige rejse.</p>
-          <div class="md:pt-12 pt-10 text-left md:text-left">
-              <p>knap</p>
-          </div>
-      </div>
+<section class="bg-rosa-500 md:grid md:grid-cols-2 md:gap-10 pt-10 pb-14 px-5 md:px-20">
+    <!-- Billeder til venstre -->
+    <div class="w-full lg:w-1/2 flex flex-col gap-m">
+        <Image src={Nyhedsbrev1} alt='billede af en holdt buket' class="rounded-40 w-full h-full object-cover md:object-cover">
+        </div>
+    <div class="w-full lg:w-1/2 flex flex-col gap-m">
+        <Image src={Nyhedsbrev2} alt='billede af pige med to buketter' class="rounded-40 w-full h-full object-cover md:object-cover">
+    </div>
   
-      <!-- img // ret billedernes højde i mobil-->
-      <div class="w-full h-auto pl-16 pr-16 pb-10 md:w-[600px] md:h-[570px] md:pt-[35px] md:relative md:left-5">
-        <!-- <Image src={datavisimg} alt='datavisualisering med blomst og fod' class="rounded-[40px] w-full h-full object-cover md:object-cover"> -->
-      </div>
-
+    <!-- Tekst og formular til højre -->
+    <div class="flex flex-col justify-center bg-rosa-500 p-m rounded-30 shadow-lg">
+      <!-- Overskrift -->
+      <h2 class="text-blue-500 text-50 font-WindstoneSerif mb-sm">
+        Vil du blomstre med os?
+      </h2>
+  
+      <!-- Brødtekst -->
+      <p class="text-darkgreyblue-500 font-LivvicRegular text-20 mb-sm">
+        Få det bedste fra Flowering direkte i din indbakke. Modtag inspiration, tips til blomsterpleje, eksklusive tilbud og nyheder om vores bæredygtige rejse.
+      </p>
+  
+      <!-- Formular -->
+      <form class="flex flex-col gap-sm">
+        <label for="name" class="text-darkgreyblue-500 text-20 font-medium">
+          Dit Navn
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Indtast dit navn"
+          class="rounded-20 border-2 border-greyblue-500 p-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        />
+  
+        <label for="email" class="text-darkgreyblue-500 text-20 font-medium">
+          Din Email
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          class="rounded-20 border-2 border-greyblue-500 p-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        />
+  
+        <!-- Knap -->
+        <button
+          type="submit"
+          class="bg-denimblue-500 text-white text-20 font-LivvicBold py-2 rounded-20 hover:bg-blue-400 transition"
+        >
+          Tilmeld dig vores nyhedsbrev
+        </button>
+      </form>
+    </div>
   </section>
-
-
   
