@@ -64,8 +64,8 @@ export default {
         /* Spacing */
         spacing: {
           "spacing-none": "0",
-          sm: "30px", // 30x i spacing IMELLEM OVERSKRIFT, UNDEROVERSKRIFT OG BRØDTEKST
-          m: "40px", // 40x i spacing IMELLEM OVERSKRIFT, UNDEROVERSKRIFT OG BRØDTEKST
+          sm: "30px", // 30x (MOBILE) i spacing IMELLEM OVERSKRIFT, UNDEROVERSKRIFT OG BRØDTEKST
+          m: "40px", // 40x (DESKTOP) i spacing IMELLEM OVERSKRIFT, UNDEROVERSKRIFT OG BRØDTEKST
           lg: "80px", // 80x i spacing I ÅBEN BURGERMENU
           xl: "120px", // Evt. 120x spacing imellem sektioner
         },
