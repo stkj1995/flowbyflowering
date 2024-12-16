@@ -4,25 +4,40 @@
 
 @layer base {
   @font-face {
-      font-family: 'WindStoneSerif';
-      src: url('/fonts/WindStoneSerifPersonalUseRegular.woff') format('woff');
-      font-weight: 400;
-      font-style: normal;
-  }
-
-  @font-face {
     font-family: 'WindStoneSerif';
     src: url('/fonts/WindStoneSerifPersonalUseRegular.woff') format('woff');
     font-weight: 400;
-    font-style: uppercase;
+    font-style: normal;
 }
 
-  @font-face {
-      font-family: 'Livvic';
-      src: url('/fonts/Livvic.woff') format('woff');
-      font-weight: 400;
-      font-style: normal;
-  }
+/* Livvic Font */
+@font-face {
+    font-family: 'Livvic';
+    src: url('/fonts/Livvic-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Livvic';
+    src: url('/fonts/Livvic-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Livvic';
+    src: url('/fonts/Livvic-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Livvic';
+    src: url('/fonts/Livvic-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
 
   .custom-padding {
       @apply p-xs md:p-lg;
