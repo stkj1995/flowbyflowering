@@ -5,7 +5,7 @@ import Button from "../Button.astro"
 ---
 
 
-<section class="pt-10 pl-5 md:grid md:grid-cols-2 md:px-20 md:pl-16 md:pt-28 md:pb-14 gap-2 bg-rosa-500">
+<section class="pt-12 pl-5 md:grid md:grid-cols-2 md:px-20 md:pl-16 md:pt-28 md:pb-14 gap-2 bg-rosa-500">
     <!-- tekst -->
       <div class="px-8 pl-16 pb-16">
           <h2 class="pb-6 pt-5 text-40 md:text-50 font-WindstoneSerif text-blue-500">Skræddersyede buketter med mindre spild</h2>
@@ -14,8 +14,17 @@ import Button from "../Button.astro"
           <div class="md:pt-12 pt-10 text-left md:text-left">
           <div class="class">
             <a href="/baeredygtighed">
-              <div class="pr-10 md:pr-10">
-                <Button variant="secondary" size="large"> Læs mere om bæredygtighed her </Button>
+              <div class="pr-10 pt-1 md:pr-10">
+                <div class="w-56 text-center relative left-[130px] md:relative md:left-0 md:w-[450px]">
+                  <Button 
+                      textMobile="Læs mere"
+                      textDesktop="Læs mere om bæredygtighed her"
+                      link="/baeredygtighed"
+                      backgroundColor="#6D7D96"
+                      textColor="#FFF"
+                      size="small md:large"
+                  />
+              </div>
             </div>
             </a>
           </div>

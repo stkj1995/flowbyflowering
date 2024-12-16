@@ -15,8 +15,18 @@ import Button from '../Button.astro';
             <br> For at tage hånd om det store blomsterspild der eksisterer i blomsterbranchen, skabte makkerparret deres helt egen version af blomsterbuketten, der udelukkende bestod af friske overskudsblomster.
         </p>
         <a href="/abonnement">
-            <div class="pt-8 md:pr-10">
-                <Button variant="primary" size="large">Skræddersy dit blomsterabonnement her</Button>
+            <div class="pt-9 relative left-3 md:pr-10 ">
+                <!-- <Button variant="primary" size="large">Skræddersy dit blomsterabonnement her</Button> -->
+                <div class="w-96 text-center relative left-8  md:relative md:left-0 md:w-[450px]">
+                    <Button 
+                        textMobile="Skræddersy dit abonnement"
+                        textDesktop="Skræddersy dit blomsterabonnement her"
+                        link="/abonnement"
+                        backgroundColor="#00054E"
+                        textColor="#FFF"
+                        size="small md:large"
+                    />
+                </div>
             </div>
         </a>
        

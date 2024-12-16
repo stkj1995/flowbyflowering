@@ -1,4 +1,32 @@
---- 
+---
+const { textMobile, textDesktop, link, backgroundColor, textColor, size, additionalClasses } = Astro.props;
+---
+
+<a href={link} 
+   target="_blank" 
+   class={`block ${size === 'large' ? 'px-8 py-4' : 'px-6 py-3'} 
+          ${additionalClasses || ''} 
+          text-20 md:text-20 font-[700] md:font-[700]
+          transition-transform duration-300 transform 
+          rounded-[50px]
+          hover:scale-105
+          ${size === 'large' ? 'sm:px-8 sm:py-4' : 'sm:px-6 sm:py-3'}
+          sm:text-center`}
+   style={`background-color: ${backgroundColor}; color: ${textColor};`}>
+    
+    <!-- Tekst for mobil -->
+    <span class="block sm:hidden">{textMobile}</span>
+    
+    <!-- Tekst for desktop -->
+    <span class="hidden sm:block">{textDesktop}</span>
+</a>
+
+
+
+
+
+
+<!-- --- 
 const {variant = "primary", size = "large"} = Astro.props;
 
 const buttonStyling = "text-white font-[700] text-20 transition-transform duration-300 transform hover:scale-105 px-12 py-3 rounded-[50px]";
@@ -17,12 +45,7 @@ const sizeClasses = {
 
 <div>
     <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot/></button>
-</div>
-
-
-
-
-
+</div> -->
 
 
 
