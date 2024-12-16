@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+  /* WindStone overskrift*/
   @font-face {
     font-family: 'WindStoneSerif';
     src: url('/fonts/WindStoneSerifPersonalUseRegular.woff') format('woff');
@@ -10,31 +11,40 @@
     font-style: normal;
 }
 
+  /* WindStoneSerif Uppercase Font */
+  @font-face {
+    font-family: 'WindStoneSerif';
+    src: url('/fonts/WindStoneSerifPersonalUseRegular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase; /* uppercase */
+}
+
 /* Livvic Font */
 @font-face {
     font-family: 'Livvic';
-    src: url('/fonts/Livvic-Regular.woff') format('woff');
+    src: url('/fonts/Livvic-Regular.woff') format('woff'); /* livvic regular */
     font-weight: 400;
-    font-style: normal;
+    font-style: normal; 
 }
 
 @font-face {
     font-family: 'Livvic';
-    src: url('/fonts/Livvic-Medium.woff') format('woff');
+    src: url('/fonts/Livvic-Medium.woff') format('woff'); /* livvic medium */
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Livvic';
-    src: url('/fonts/Livvic-Bold.woff') format('woff');
+    src: url('/fonts/Livvic-Bold.woff') format('woff'); /* livvic bold */
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Livvic';
-    src: url('/fonts/Livvic-Italic.woff') format('woff');
+    src: url('/fonts/Livvic-Italic.woff') format('woff'); /* livvic italic */
     font-weight: 400;
     font-style: italic;
 }
