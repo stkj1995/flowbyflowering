@@ -1,0 +1,138 @@
+---
+import { Image } from 'astro:assets';
+import dokumentation from '../../assets/images/dokumentation.webp';
+import samarbejde from '../../assets/images/samarbejde.webp';
+import vandforbrug from '../../assets/images/vandforbrug.webp';
+import arbejdsforhold from '../../assets/images/arbejdsforhold.webp';
+import emballage from '../../assets/images/emballage.webp';
+import gennemsigtighed from '../../assets/images/gennemsigtighed.webp';
+import Button from "../Button.astro";
+---
+
+
+<section class="bg-rosa-500 py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-blue-500 text-40 md:text-50 font-WindstoneSerif mb-6 leading-tight">
+        Principper til glæde for verden
+      </h2>
+      <p class="font-LivvicRegular text-20 text-darkgreyblue-500 mb-12 max-w-2xl mx-auto leading-tight">
+        Vores kamp for en bedre verden er ikke kun begrænset til vores blomsterudvalg. Tag en tur gennem vores bæredygtige principper nedenfor, og tilmeld dig vores nyhedsbrev for at følge med i vores rejse, når vi løbende indfører nye tiltag.
+      </p>
+    </div>
+  
+    <!-- Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Dokumentation -->
+      <div class="text-center p-6">
+        <div class="w-2/2 md:w-full">
+            <Image 
+                src={dokumentation} 
+                alt="stol med pink blomster ovenpå" 
+                class="items-center rounded-40 md:mt-20 md:mb-20 mx-auto ml-30 md:ml-10 w-[60%] h-[60%] md:w-[70%] md:h-[70%] object-cover md:object-cover"
+            />
+        </div>
+        <h3 class="text-30 md:text-40 font-WindstoneSerif mb-2 text-blue-500 leading-tight">Dokumentation</h3>
+        <p class="text-darkgreyblue-500 text-20 font-LivvicRegular leading-tight">
+            Vi har en livscyklusanalyse, som dokumenterer at vores blomstertyper har et CO2-aftryk, der er 35% lavere end konventionelle blomster.
+        </p>
+        <br>
+        <a href="https://flowering.dk/wp-content/uploads/2023/05/Life-Cycle-Assessment-of-the-Production-and-Handling-of-Flowers-for-publication.pdf" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="text-blue-500 mt-2 inline-block font-LivvicRegular font-bold">
+        Læs mere her
+     </a>
+     
+      </div>
+      
+  
+      <!-- Samarbejde -->
+      <div class="text-center p-6">
+        <div class="w-2/2 md:w-full">
+            <Image 
+                src={samarbejde} 
+                alt="stol med pink blomster ovenpå" 
+                class="items-center rounded-40 md:mt-20 md:mb-20 mx-auto ml-30 md:ml-10 w-[60%] h-[60%] md:w-[70%] md:h-[70%] object-cover md:object-cover"
+            />
+        </div>
+        <h3 class="text-30 md:text-40 font-WindstoneSerif mb-2 text-blue-500 leading-tight">Samarbejde</h3>
+        <p class="text-darkgreyblue-500 text-20 font-LivvicRegular leading-tight">
+        Vi støtter op om socialbæredygtige organisationer.
+        </p>
+      </div>
+  
+      <!-- Vandforbrug -->
+      <div class="text-center p-6">
+        <div class="w-2/2 md:w-full">
+            <Image 
+                src={vandforbrug} 
+                alt="stol med pink blomster ovenpå" 
+                class="items-center rounded-40 md:mt-20 md:mb-20 mx-auto ml-30 md:ml-10 w-[60%] h-[60%] md:w-[70%] md:h-[70%] object-cover md:object-cover"
+            />
+        </div>
+        <h3 class="text-30 md:text-40 font-WindstoneSerif mb-2 text-blue-500 leading-tight">Vandforbrug</h3>
+        <p class="text-darkgreyblue-500 text-20 font-LivvicRegular leading-tight">
+            Med hjælp fra DTU har vi udviklet et vandfiltreringssystem, som minimerer vores vandforbrug med over 90%.
+        </p>
+      </div>
+  
+      <!-- Arbejdsforhold -->
+      <div class="text-center p-6">
+        <div class="w-2/2 md:w-full">
+            <Image 
+                src={arbejdsforhold} 
+                alt="stol med pink blomster ovenpå" 
+                class="items-center rounded-40 md:mt-20 md:mb-20 mx-auto ml-30 md:ml-10 w-[60%] h-[60%] md:w-[70%] md:h-[70%] object-cover md:object-cover"
+            />
+        </div>
+        <h3 class="text-30 md:text-40 font-WindstoneSerif mb-2 text-blue-500 leading-tight">Arbejdsforhold</h3>
+        <p class="text-darkgreyblue-500 text-20 font-LivvicRegular leading-tight">
+            Alle vores passionerede medarbejdere er ansat under danske arbejdsvilkår, der sikrer ordentlig løn og gode forhold.
+        </p>
+      </div>
+  
+      <!-- Emballage -->
+      <div class="text-center p-6">
+        <div class="w-2/2 md:w-full">
+            <Image 
+                src={emballage} 
+                alt="stol med pink blomster ovenpå" 
+                class="items-center rounded-40 md:mt-20 md:mb-20 mx-auto ml-30 md:ml-10 w-[60%] h-[60%] md:w-[70%] md:h-[70%] object-cover md:object-cover"
+            />
+        </div>
+        <h3 class="text-30 md:text-40 font-WindstoneSerif mb-2 text-blue-500 leading-tight">Emballage</h3>
+        <p class="text-darkgreyblue-500 text-20 font-LivvicRegular leading-tight">
+            Vores blomsterbuketters emballage er minimal, da vi hverken gør brug af papkasser, cellofan eller andre unødvendigheder.
+        </p>
+      </div>
+  
+      <!-- Gennemsigtighed -->
+      <div class="text-center p-6">
+        <div class="w-2/2 md:w-full">
+            <Image 
+                src={gennemsigtighed} 
+                alt="stol med pink blomster ovenpå" 
+                class="items-center rounded-40 md:mt-20 md:mb-20 mx-auto ml-30 md:ml-10 w-[60%] h-[60%] md:w-[70%] md:h-[70%] object-cover md:object-cover"
+            />
+        </div>
+        <h3 class="text-30 md:text-40 font-WindstoneSerif mb-2 text-blue-500 leading-tight">Gennemsigtighed</h3>
+        <p class="text-darkgreyblue-500 text-20 font-LivvicRegular leading-tight">
+            Vi arbejder aktivt og transparent for at informere og brede kendskabet til udfordringerne i den globale blomsterindustri.
+        </p>
+      </div>
+    </div>
+  
+        <!-- CTA Knappen -->
+        <div class="text-center mt-12">
+            <Button 
+            textMobile="Skræddersy dit abonnement"
+            textDesktop="Skræddersy dit blomsterabonnement her"
+            link="/baeredygtighed" 
+            backgroundColor="#2B3D5A" 
+            textColor="#ffffff" 
+            size="small md:large"
+            additionalClasses="hover:bg-[#6D7D96] mx-auto max-w-[450px]"
+            />
+        </div>
+  </section>
+  
