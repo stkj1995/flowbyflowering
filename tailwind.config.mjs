@@ -110,6 +110,7 @@ export default {
         /* Border størrelser */
         borderWidth: {
           0: "0px",
+          1: "1px", //nyhedsbrev label-stroke
           2: "2px", // button-stroke
         },
   
