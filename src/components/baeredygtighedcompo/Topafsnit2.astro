@@ -1,60 +1,26 @@
 ---
 import { Image } from 'astro:assets';
-import scoll_pil from '../../assets/images/stolblomst.webp';
+import stolblomst from '../../assets/images/stolblomst.webp';
 
 ---
 <script src="https://cdn.tailwindcss.com"></script>
 
-<section class="bg-rosa-500 md:grid md:grid-cols-3 md:gap-0 pt-10 pb-20 px-5 md:px-20 md:pt-20 md:pb-20">
-      <!-- Billeder til højre -->
+<section class="bg-rosa-500 pt-10 pl-5 md:grid md:grid-cols-2 md:px-20 md:pl-16">  
+    <!-- tekst -->
+        <div class="px-8 pl-16 pb-32">
+            <h2 class="text-blue-500 text-40 md:text-50 font-WindstoneSerif mb-sm md:leading-10">En grønnere blomsterindustri</h2>
+            <h3 class="text-blue-500 text-30 md:text-40 font-WindstoneSerif mb-sm md:leading-10">Skabt med en passioneret mission</h3>
+            <p class="text-darkgreyblue-500 font-LivvicRegular text-20 mb-sm">Grundstenene til Flowering blev lagt i 2020. Her var det især ønsket om at skabe en blomstervirksomhed, der skulle tage højde for de mange klimaproblematikker der eksisterer i den øvrige blomsterbranche, som var drivkraften.
+                <br><br>
+                For at imødekomme det ønske er overskudsblomster blevet anvendt i vores blomsterbuketter siden dag ét. Overskudsblomster spiller forsat en væsentlig rolle i vores blomsterbuketter, hvor vi siden har tilføjet miljøcertificerede blomster og blomster fra danske blomsteravlere.  </p>
+        </div>
+        
+    <!-- Billede til højre -->
     <div class="w-full flex flex-col md:flex-row gap-2 justify-between">
         <div class="w-1/2 md:w-full">
-        <Image src={stolblomst} alt='stol med pink blomster ovenpå' class="rounded-40 md:mt-14 ml-0 w-48 h-60 md:w-96 md:h-full object-cover md:object-cover">
-    </div></div>
+        <Image src={stolblomst} alt='stol med pink blomster ovenpå' class="rounded-40 md:mt-0 ml-0 w-48 h-60 md:w-96 md:h-full object-cover md:object-cover">
+    </div></div> 
 
-
-    <!-- Tekst og formular til venstre -->
-    <div class="flex flex-col justify-center bg-rosa-500 p-10 max-w-3xl mx-auto">
-      <!-- Overskrift -->
-      <h2 class="text-blue-500 text-50 font-WindstoneSerif mb-sm md:leading-10">
-        Vil du blomstre med os?
-      </h2>
-  
-      <!-- Brødtekst -->
-      <p class="text-darkgreyblue-500 font-LivvicRegular text-20 mb-sm">
-        Få det bedste fra Flowering direkte i din indbakke. Modtag inspiration, tips til blomsterpleje, eksklusive tilbud og nyheder om vores bæredygtige rejse.
-      </p>
-  
-      <!-- Formular -->
-      <form class="flex flex-col gap-sm">
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Navn"
-          class="rounded-20 border-1 border-greyblue-500 p-2 focus:ring-1 focus:ring-greyblue-600 focus:outline-none"
-        />
-  
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Email"
-          class="rounded-20 border-1 border-greyblue-500 p-2 focus:ring-1 focus:ring-greyblue-600 focus:outline-none"
-        />
-  
-        <!-- Midlertidig Knap -->
-        <button
-          type="submit"
-          class="bg-greyblue-500 text-white text-20 font-LivvicBold py-2 rounded-20 hover:bg-denimblue-500 transition shadow-sm"
-        >
-          Tilmeld dig vores nyhedsbrev
-        </button>
-      </form>
-    </div>   
-
-  
 </section>
-
 
   
