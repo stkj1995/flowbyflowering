@@ -2,57 +2,78 @@
 // import Button from '../components/Button.astro';
 
 ---
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
 <section class="bg-rosa-500 md:pt-20 md:pb-20 flex justify-center flex-col md:gap-0 pt-20 pb-20 font-WindstoneSerif">
-    <h2 class="text-blue-500 text-center md:text-left text-50 font-WindstoneSerif md:ml-48">Vores blomstertyper</h2>
+    <h2 class="text-blue-500 text-center md:text-left text-50 font-WindstoneSerif md:ml-48 my-sm md:my-m">Vores blomstertyper</h2>
 
     <div class="flex flex-col justify-center md:flex-row md:gap-28 md:px-48">
-        <div class="w-96 mx-auto md:m-0">
-            <h3 class="text-md text-center text-blue-500 sm:text-lg text-30 md:text-40 md:text-left font-WindstoneSerif mt-sm md:mt-m">
+
+        <!-- Første sektion -->
+        <div class="w-96 mx-auto md:m-0 my-sm md:my-m" x-data="{ open: false }">
+            <h3 class="text-md text-center text-blue-500 sm:text-lg text-30 md:text-40 md:text-left font-WindstoneSerif mb-sm md:mb-m">
                 Danske blomster
             </h3>
-            <p class="text-darkgreyblue-500 text-center md:text-left sm:text-sm md:text-base mt-sm md:mt-m font-LivvicRegular">
+            <p class="text-darkgreyblue-500 px-10 md:px-0 text-20 md:text-20 text-center md:text-left sm:text-m font-LivvicRegular">
                 Ved at vælge dansk og lokalt minimerer vi transporten fra jord til bord. Vi prioriterer, at blomsterne dyrkes på friland uden brug af kunstgødning og sprøjtemidler...
             </p>
-            <br><br>
+            <div x-show="open" class="">
+                <p class="text-darkgreyblue-500 px-10 md:px-0 text-20 md:text-20 text-center md:text-left sm:text-m font-LivvicRegular">
+                    Ved at vælge dansk og lokalt minimerer vi transporten fra jord til bord. Vi prioriterer, at blomsterne dyrkes på friland uden brug af kunstgødning og sprøjtemidler. På den måde passer vi bedst muligt på vores jordklode.
+                </p>
+            </div>
             <button
-                type="submit"
-                class="bg-greyblue-500 text-white text-center md:text-left text-20 px-10 font-LivvicBold py-2 rounded-20 hover:bg-denimblue-500 transition shadow-sm mt-sm md:mt-m"
+                @click="open = !open"
+                class="bg-greyblue-500 text-white text-center text-20 px-10 font-LivvicBold py-2 rounded-20 hover:bg-denimblue-500 transition shadow-sm mt-sm md:mt-m"
             >
-                Læs mere
+                <span x-text="open ? 'Læs mindre' : 'Læs mere'"></span>
             </button>
         </div>
 
-        <div class="w-96 mx-auto md:m-0">
-            <h3 class="text-md text-center text-blue-500 sm:text-lg text-30 md:text-40 md:text-left font-WindstoneSerif mt-sm md:mt-m">
+        <!-- Anden sektion -->
+        <div class="w-96 mx-auto md:m-0 my-sm md:my-m" x-data="{ open: false }">
+            <h3 class="text-md text-center text-blue-500 sm:text-lg text-30 md:text-40 md:text-left font-WindstoneSerif mb-sm md:mb-m">
                 Friske overskudsblomster
             </h3>
-            <p class="text-center text-darkgreyblue-500 md:text-left sm:text-sm md:text-base mt-sm md:mt-m font-LivvicRegular">
+            <p class="text-darkgreyblue-500 px-10 md:px-0 text-20 md:text-20 text-center md:text-left sm:text-m font-LivvicRegular">
                 For at undgå unødigt blomsterspild har vi eksklusive aftaler med blomster-transportører, som forhandler blomster til fysiske blomsterbutikker....
             </p>
-            <br><br>
+            <div x-show="open" class="">
+                <p class="text-darkgreyblue-500 px-10 md:px-0 text-20 md:text-20 text-center md:text-left sm:text-m font-LivvicRegular">
+                    For at undgå unødigt blomsterspild 
+                    har vi eksklusive aftaler med blomster-transportører, som forhandler blomster til fysiske blomsterbutikker. 
+                    Hos blomstertransportørerne er salget ofte mindre end lageret, hvilket resulterer i, at de ellers friske blomster, som ikke bliver solgt, smides ud. Derfor er det vores fornemmeste opgave at anvende de overskudsblomster, der stadig er friske som komponent til vores miljøbuket.
+                </p>
+            </div>
             <button
-                type="submit"
-                class="bg-greyblue-500 text-white text-center md:text-left text-20 px-10 font-LivvicBold py-2 rounded-20 hover:bg-denimblue-500 transition shadow-sm mt-sm md:mt-m"
+                @click="open = !open"
+                class="bg-greyblue-500 text-white text-center text-20 px-10 font-LivvicBold py-2 rounded-20 hover:bg-denimblue-500 transition shadow-sm mt-sm md:mt-m"
             >
-                Læs mere
+                <span x-text="open ? 'Læs mindre' : 'Læs mere'"></span>
             </button>
         </div>
 
-        <div class="w-96 mx-auto md:m-0">
-            <h3 class="text-md text-center text-blue-500 sm:text-lg text-30 md:text-40 md:text-left font-WindstoneSerif mt-sm md:mt-m">
+        <!-- Tredje sektion -->
+        <div class="w-96 mx-auto md:m-0 my-sm md:my-m" x-data="{ open: false }">
+            <h3 class="text-md text-center text-blue-500 sm:text-lg text-30 md:text-40 md:text-left font-WindstoneSerif mb-sm md:mb-m">
                 Certificerede blomster
             </h3>
-            <p class="text-center text-darkgreyblue-500 md:text-left sm:text-sm md:text-base mt-sm md:mt-m font-LivvicRegular">
+            <p class="text-darkgreyblue-500 px-10 md:px-0 text-20 md:text-20 text-center md:text-left sm:text-m font-LivvicRegular">
                 Vi supplerer vores udvalg med blomster fra miljøcertificerede gartnerier, som bliver tjekket for deres brug af kunstgødning, sprøjtemidler, affaldssortering ...
             </p>
-            <br><br>
+            <div x-show="open" class="">
+                <p class="text-darkgreyblue-500 px-10 md:px-0 text-20 md:text-20 text-center md:text-left sm:text-m font-LivvicRegular">
+                    Vi supplerer vores udvalg med blomster fra miljøcertificerede gartnerier, som bliver tjekket for deres brug af kunstgødning, sprøjtemidler, affaldssortering, vandspild og ikke mindst arbejdsvilkårene for deres ansatte. Disse gartnerier findes forskellige steder i verden, og ofte i klimaer hvor det er mest naturligt at dyrke afskårne blomster. Vi prioriterer følgende certificeringer: BIO, MPS, GLOBAL G.A.P, FLORVERDE.
+                </p>
+            </div>
             <button
-                type="submit"
-                class="bg-greyblue-500 text-white text-center md:text-left text-20 px-10 font-LivvicBold py-2 rounded-20 hover:bg-denimblue-500 transition shadow-sm mt-sm md:mt-m"
+                @click="open = !open"
+                class="bg-greyblue-500 text-white text-center text-20 px-10 font-LivvicBold py-2 rounded-20 hover:bg-denimblue-500 transition shadow-sm mt-sm md:mt-m"
             >
-                Læs mere
+                <span x-text="open ? 'Læs mindre' : 'Læs mere'"></span>
             </button>
         </div>
+
     </div>
 </section>
+
