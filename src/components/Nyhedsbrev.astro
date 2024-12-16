@@ -8,7 +8,7 @@ import Nyhedsbrev2 from '../assets/images/nyhedsbrev2.png'
 
 <section class="bg-rosa-500 md:grid md:grid-cols-3 md:gap-0 pt-10 pb-20 px-5 md:px-20">
     <!-- Tekst og formular til højre -->
-    <div class="flex flex-col justify-center bg-rosa-500 p-10">
+    <div class="flex flex-col justify-center bg-rosa-500 p-10 max-w-3xl mx-auto">
       <!-- Overskrift -->
       <h2 class="text-blue-500 text-50 font-WindstoneSerif mb-sm">
         Vil du blomstre med os?
@@ -48,11 +48,23 @@ import Nyhedsbrev2 from '../assets/images/nyhedsbrev2.png'
     </div>   
 
     <!-- Billeder til venstre -->
-    <div class="w-full flex flex-row md:flex-col gap-4">
+    <div class="w-full flex flex-row md:flex-col gap-2">
         <Image src={Nyhedsbrev1} alt='billede af en holdt buket' class="rounded-40 ml-0 w-48 h-60 md:w-96 md:h-full object-cover md:object-cover">
     </div>
-    <div class="w-full flex flex-row md:flex-col gap-4">
+    <div class="w-full flex flex-row md:flex-col gap-2">
         <Image src={Nyhedsbrev2} alt='billede af pige med to buketter' class="md:mt-56 rounded-40 w-32 h-44 md:w-96 md:h-96 object-cover md:object-cover">
     </div>
-  </section>
+
+    <!-- Billeder i to kolonner på samme række -->
+<!-- <div class="w-full flex flex-row gap-2 justify-between">
+    <div class="w-1/2">
+        <Image src={Nyhedsbrev1} alt='billede af en holdt buket' class="rounded-40 w-full h-auto object-cover">
+    </div>
+    <div class="w-1/2">
+        <Image src={Nyhedsbrev2} alt='billede af pige med to buketter' class="rounded-40 w-full h-auto object-cover">
+    </div>
+</div> -->
+
+</section>
+
   
