@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+import stolblomst from '../../assets/images/stolblomst.webp';
+
+---
+<script src="https://cdn.tailwindcss.com"></script>
+
+<section class="bg-rosa-500 pt-10 pl-5 md:grid md:grid-cols-2 md:pl-16">  
+    <!-- tekst -->
+        <div class="px-8 pl-16 pb-10 md:px-20 ">
+            <h2 class="text-blue-500 text-40 md:text-50 font-WindstoneSerif mb-sm md:leading-tight md:pt-20">En grønnere blomsterindustri</h2>
+            <h3 class="text-blue-500 text-30 md:text-40 font-WindstoneSerif mb-sm md:leading-tight">Skabt med en passioneret mission</h3>
+            <p class="text-darkgreyblue-500 font-LivvicRegular text-20 md:text-20 mb-sm">Grundstenene til Flowering blev lagt i 2020. Her var det især ønsket om at skabe en blomstervirksomhed, der skulle tage højde for de mange klimaproblematikker der eksisterer i den øvrige blomsterbranche, som var drivkraften.
+                <br><br>
+                For at imødekomme det ønske er overskudsblomster blevet anvendt i vores blomsterbuketter siden dag ét. Overskudsblomster spiller forsat en væsentlig rolle i vores blomsterbuketter, hvor vi siden har tilføjet miljøcertificerede blomster og blomster fra danske blomsteravlere.  </p>
+        </div>
+        
+    <!-- Billede til højre -->
+    <div class="w-full flex flex-col md:flex-row gap-2 justify-between pb-20">
+        <div class="w-2/2 md:w-full">
+            <Image 
+                src={stolblomst} 
+                alt="stol med pink blomster ovenpå" 
+                class="rounded-40 md:mt-20 md:mb-20 mx-auto ml-30 md:ml-10 w-[50%] h-[50%] md:w-[80%] md:h-[80%] object-cover md:object-cover"
+            />
+        </div>
+    </div>
+</section>
+
+  
