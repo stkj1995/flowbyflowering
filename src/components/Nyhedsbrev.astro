@@ -37,13 +37,18 @@ import Nyhedsbrev2 from '../assets/images/nyhedsbrev2.png'
           class="rounded-20 border-1 border-greyblue-500 p-2 focus:ring-1 focus:ring-greyblue-600 focus:outline-none"
         />
   
-        <!-- Midlertidig Knap -->
-        <button
-          type="submit"
-          class="bg-greyblue-500 text-white text-20 font-LivvicBold py-2 rounded-20 hover:bg-denimblue-500 transition shadow-sm"
-        >
-          Tilmeld dig vores nyhedsbrev
-        </button>
+           <!-- CTA Knappen -->
+           <div class="text-center mt-12 text-nowrap">
+            <Button 
+            textMobile="Tilmeld dig vores nyhedsbrev"
+            textDesktop="Tilmeld dig vores nyhedsbrev"
+            link="/baeredygtighed" 
+            backgroundColor="#2B3D5A" 
+            textColor="#ffffff" 
+            size="small md:large"
+            additionalClasses="hover:bg-[#6D7D96] mx-auto max-w-[450px]"
+            />
+        </div>
       </form>
     </div>   
 
