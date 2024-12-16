@@ -14,7 +14,7 @@ import logohvid from '../assets/images/logo_hvid.webp'
     <!-- Navigation bar (desktop) -->
     <nav class="hidden md:flex items-center md:space-x-[720px] px-8 py-4 text-blue-500">
         <!-- Logo (synligt på desktop) -->
-         <a href="index">
+         <a href="/index">
             <div class="w-[155px] h-[90px]">
                 <!-- Logo  -->
            <Image src={logo} alt='illustration af blomst med skrift Flow by flowering' class="w-full h-full">
@@ -46,12 +46,14 @@ import logohvid from '../assets/images/logo_hvid.webp'
     <div x-show="open" x-transition.duration.300ms class="md:hidden fixed inset-0 bg-[#6D7D96] bg-opacity-100 z-50">
         <div class="relative top-6">
              <div class="class">
-            <!-- logo img i burgermenu -->
-            <div class="w-[200px] h-[150px] relative -top-6">
+            <a href="/index">
+               <!-- logo img i burgermenu -->
+               <div class="w-[200px] h-[150px] relative -top-6">
                 <!-- Logo  -->
                 <Image src={logohvid} alt='illustration af blomst med skrift Flow by flowering' class="w-full h-full">
                 </div>
-            
+            </a>
+         
             <!-- Knap (X) -->
             <button @click="open = false" class="absolute top-6 right-10 text-white text-3xl">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,7 +66,7 @@ import logohvid from '../assets/images/logo_hvid.webp'
             <div class="relative top-10 flex flex-col h-full space-y-28 items-center ">
             <!-- Links -->
             <a href="/abonnement" @click="open = false" class="text-white font-[700] text-20">Abonnement</a>
-            <a href="/baeredygtighed" @click="open = false" class="text-white font-[700]text-20">Bæredygtighed</a>
+            <a href="/baeredygtighed" @click="open = false" class="text-white font-[700] text-20">Bæredygtighed</a>
             <a href="/historie" @click="open = false" class="text-white font-[700] text-20">Vores historie</a>
             </div>
          
