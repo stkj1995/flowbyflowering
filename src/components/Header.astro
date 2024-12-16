@@ -1,6 +1,7 @@
 ---
 import Image from "astro/components/Image.astro"
 import logo from '../assets/images/logo.webp'
+import logohvid from '../assets/images/logo_hvid.webp'
 ---
 
 <!-- Navigation -->
@@ -27,8 +28,8 @@ import logo from '../assets/images/logo.webp'
     </nav>
 
     <!-- Burger menu knap (mobil version) -->
-    <div class="md:hidden flex items-center space-x-[400px] px-6 py-4 text-blue-500">
-        <div class="w-[120px] h-[70px] relative top-1">
+    <div class="md:hidden flex items-center space-x-[370px] px-6 py-4 text-blue-500">
+        <div class="w-[150px] h-[80px] relative top-1">
         <!-- Logo (synligt på mobil) -->
         <Image src={logo} alt='illustration af blomst med skrift Flow by flowering' class="w-full h-full">
         </div>
@@ -46,9 +47,9 @@ import logo from '../assets/images/logo.webp'
         <div class="relative top-6">
              <div class="class">
             <!-- logo img i burgermenu -->
-            <div class="w-[120px] h-[70px] relative top-4 left-7">
+            <div class="w-[200px] h-[150px] relative -top-6">
                 <!-- Logo  -->
-                <Image src={logo} alt='illustration af blomst med skrift Flow by flowering' class="w-full h-full">
+                <Image src={logohvid} alt='illustration af blomst med skrift Flow by flowering' class="w-full h-full">
                 </div>
             
             <!-- Knap (X) -->
@@ -60,7 +61,7 @@ import logo from '../assets/images/logo.webp'
             </div>
          
 
-            <div class="relative top-28 flex flex-col h-full space-y-28 items-center ">
+            <div class="relative top-10 flex flex-col h-full space-y-28 items-center ">
             <!-- Links -->
             <a href="abonnement" @click="open = false" class="text-white font-LivvicBold text-20">Abonnement</a>
             <a href="baeredygtighed" @click="open = false" class="text-white font-LivvicBold text-20">Bæredygtighed</a>
