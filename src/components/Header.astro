@@ -12,7 +12,7 @@ import logohvid from '../assets/images/logo_hvid.webp'
      @click="document.body.classList.toggle('overflow-hidden', open)">
 
     <!-- Navigation bar (desktop) -->
-    <nav class="hidden md:flex items-center md:space-x-[720px] px-8 py-4 text-blue-500">
+    <nav class="hidden md:flex items-center md:space-x-[720px] px-0 py-4 text-blue-500">
         <!-- Logo (synligt på desktop) -->
          <a href="/index">
             <div class="w-[155px] h-[90px]">
@@ -28,7 +28,7 @@ import logohvid from '../assets/images/logo_hvid.webp'
     </nav>
 
     <!-- Burger menu knap (mobil version) -->
-    <div class="md:hidden flex items-center space-x-[370px] px-6 py-4 text-blue-500">
+    <div class="md:hidden flex items-center space-x-[370px] px-0 py-4 text-blue-500">
         <div class="w-[150px] h-[80px] relative top-1">
         <!-- Logo (synligt på mobil) -->
         <Image src={logo} alt='illustration af blomst med skrift Flow by flowering' class="w-full h-full">
