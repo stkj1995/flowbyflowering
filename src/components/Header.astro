@@ -12,7 +12,7 @@ import logohvid from '../assets/images/logo_hvid.webp'
      @click="document.body.classList.toggle('overflow-hidden', open)">
 
     <!-- Navigation bar (desktop) -->
-    <nav class="hidden md:flex items-center md:space-x-[720px] px-0 py-4 text-blue-500">
+    <nav class="hidden md:flex items-center md:space-x-[720px] px-0 py-4 text-blue-500 overflow-hidden">
         <!-- Logo (synligt på desktop) -->
          <a href="/index">
             <div class="w-[155px] h-[90px]">
@@ -20,30 +20,29 @@ import logohvid from '../assets/images/logo_hvid.webp'
            <Image src={logo} alt='illustration af blomst med skrift Flow by flowering' class="w-full h-full">
              </div>
         </a>
-        <div class="space-x-10">
+        <div class="space-x-20">
             <a href="/abonnement" class="font-[700] text-20">Abonnement</a>
             <a href="/baeredygtighed" class="font-[700] text-20">Bæredygtighed</a>
             <a href="/historie" class="font-[700] text-20">Vores historie</a>
         </div>
     </nav>
 
-    <!-- Burger menu knap (mobil version) -->
-    <div class="md:hidden flex items-center space-x-[370px] px-0 py-4 text-blue-500">
-        <div class="w-[150px] h-[80px] relative top-1">
-        <!-- Logo (synligt på mobil) -->
-        <Image src={logo} alt='illustration af blomst med skrift Flow by flowering' class="w-full h-full">
-        </div>
-
-        <!-- Burger knap -->
-        <button @click="open = !open" class="focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
+  <!-- Burger menu knap (mobil version) -->
+<div class="md:hidden flex items-center justify-between px-6 py-4 text-blue-500 w-full space-x-60 overflow-hidden">
+    <div class="w-[150px] h-[80px] relative top-1">
+        <Image src={logo} alt="illustration af blomst med skrift Flow by flowering" class="w-full h-full"/>
     </div>
+    <!-- Burger knap --> 
+    <button @click="open = !open" class="focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+</div>
+
 
     <!-- Mobil Menu -->
-    <div x-show="open" x-transition.duration.300ms class="md:hidden fixed inset-0 bg-[#6D7D96] bg-opacity-100 z-50">
+    <div x-show="open" x-transition.duration.300ms class="md:hidden fixed inset-0 bg-[#6D7D96] bg-opacity-100 z-50 overflow-hidden">
         <div class="relative top-6">
              <div class="class">
             <a href="/index">
