@@ -83,7 +83,7 @@ export default {
         fontSize: {
           "12": "12px", // Footer Link
           "16": "16px", // P Footer
-          "20": "20px", // Paragraph
+          "18": "18px", // Paragraph
           "30": "30px", // H3 Mobile
           "40": "40px", // H2 Mobile + H3 Desktop
           "50": "50px", // H1 Mobile + H2 Desktop
