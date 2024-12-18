@@ -1,7 +1,27 @@
 ---
 import { Image } from 'astro:assets';
-import hero2 from '../../assets/images/baeredygtig-hero.webp'
+import heroforside from '../../assets/images/heroforside.webp'
+import Button from "../Button.astro";
 ---
 
-<Image src={hero2} alt='billede af hvid blomst' class="h-screen object-cover"
-/>
+<div class="relative">
+<Image src={heroforside} alt='billede af hvid blomst' class="h-screen w-screen object-cover"/>
+
+<div class="absolute inset-0 md:ml-28 md:mt-20 m-20 mt-40 md:m-0">
+<h1 class="text-50 md:text-200 font-WindstoneSerif uppercase md:mb-[-130px]">FLOW</h1>
+<h1 class="text-50 md:text-200 font-WindstoneSerif md:mb-[-40px] mb-10">By Flowering</h1>
+<h2 class="text-40 md:text-50 font-WindstoneSerif ">Blomsterabonnementer med omtanke for miljøet</h2>
+<div class="mt-20 md:mt-12 text-center">
+    <Button 
+      textMobile="Skræddersy dit abonnement"
+      textDesktop="Skræddersy dit blomsterabonnement her"
+      link="/abonnement" 
+      backgroundColor="#2B3D5A" 
+      textColor="#ffffff" 
+      size="small md:large"
+      additionalClasses="hover:bg-[#6D7D96] max-w-[450px]"
+    />
+  </div>
+</div>
+
+</div>
