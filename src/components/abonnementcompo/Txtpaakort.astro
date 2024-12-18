@@ -1,0 +1,31 @@
+---
+import Button from "../Button.astro";
+---
+
+<section id="Txtpaakort" class="min-h-screen flex flex-col items-center justify-center bg-[#fdf8f6] text-center p-4">
+  <!-- Overskrift -->
+  <h1 class="text-40 font-WindstoneSerif text-blue-500">Ønsker du et flot kort med til din bestilling?</h1>
+  <p class="text-18 font-LivvicRegular text-darkgreyblue-500 mt-2">Herunder kan du skrive din ønskede tekst</p>
+  
+  <!-- Skrivefelt -->
+  <div class="mt-6 grid grid-cols-1 gap-20 md:grid-cols-1">
+    <button class="px-12 py-4 border-2 border-denimblue-500 rounded-20 text-denimblue-500 font-bold hover:bg-greyblue-500 hover:text-white hover:border-none transition duration-200">
+    --- Her skal være skrivefelt - ikke færdigt ---
+    </button>
+ 
+  </div>
+  
+  <!-- Videre Knap -->
+  <div class="pt-4 md:mt-8">
+    <div class="w-36 text-center mx-auto md:w-[150px]">
+      <Button 
+        textMobile="Videre"
+        textDesktop="Videre"
+        link="#"
+        backgroundColor="#2B3D5A"
+        textColor="#FFF"
+        size="small md:large"
+      />
+    </div>
+  </div>
+</section>
