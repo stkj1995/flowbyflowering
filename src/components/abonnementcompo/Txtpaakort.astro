@@ -29,3 +29,23 @@ import Button from "../Button.astro";
     </div>
   </div>
 </section>
+
+
+<script>
+  // Hent alle knapperne
+  const buttons = document.querySelectorAll('button');
+
+  // Funktion til at håndtere klik og ændre farve på knapperne
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Fjern 'active' klasse fra alle knapper
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-denimblue-500', 'text-white', 'border-none');
+        btn.classList.add('hover:bg-denimblue-500', 'hover:text-white', 'border-denimblue-500');
+      });
+
+      // Tilføj 'active' klasse til den valgte knap
+      button.classList.add('bg-denimblue-500', 'text-white', 'border-none');
+    });
+  });
+</script>
