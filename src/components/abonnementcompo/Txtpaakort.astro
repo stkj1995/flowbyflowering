@@ -4,24 +4,26 @@ import Button from "../Button.astro";
 
 <section id="Txtpaakort" class="min-h-screen flex flex-col items-center justify-center bg-[#fdf8f6] text-center p-4">
   <!-- Overskrift -->
-  <h1 class="text-40 font-WindstoneSerif text-blue-500">Ønsker du et flot kort med til din bestilling?</h1>
+  <h1 class="text-40 font-WindstoneSerif text-blue-500">Skal der en tekst med på kortet?</h1>
   <p class="text-18 font-LivvicRegular text-darkgreyblue-500 mt-2">Herunder kan du skrive din ønskede tekst</p>
-  
-  <!-- Skrivefelt -->
-  <div class="mt-6 grid grid-cols-1 gap-20 md:grid-cols-1">
-    <button class="px-12 py-4 border-2 border-denimblue-500 rounded-20 text-denimblue-500 font-bold hover:bg-greyblue-500 hover:text-white hover:border-none transition duration-200">
-    --- Her skal være skrivefelt - ikke færdigt ---
-    </button>
- 
+
+  <!-- Tekstfelt -->
+  <div id="tekstfelt-container" class="mt-4">
+    <textarea
+      id="tekstfelt"
+      class="w-full max-w-lg p-4 border-2 border-darkgreyblue-500 rounded-20 text-darkgreyblue-500 focus:outline-none focus:ring-2 focus:ring-denimblue-500"
+      rows="4"
+      placeholder="Skriv din tekst her..."
+    ></textarea>
   </div>
-  
+
   <!-- Videre Knap -->
   <div class="pt-4 md:mt-8">
     <div class="w-36 text-center mx-auto md:w-[150px]">
       <Button 
         textMobile="Videre"
         textDesktop="Videre"
-        link="#"
+        link="#Kurv"
         backgroundColor="#2B3D5A"
         textColor="#FFF"
         size="small md:large"
@@ -30,22 +32,43 @@ import Button from "../Button.astro";
   </div>
 </section>
 
-
 <script>
-  // Hent alle knapperne
-  const buttons = document.querySelectorAll('button');
+// kort-script.js
+document.addEventListener("DOMContentLoaded", () => {
+    const normaltKortBtn = document.getElementById("normalt-kort");
+    const julekortBtn = document.getElementById("julekort");
+    const nejBtn = document.getElementById("nej");
+    const tekstfeltContainer = document.getElementById("tekstfelt-container");
 
-  // Funktion til at håndtere klik og ændre farve på knapperne
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      // Fjern 'active' klasse fra alle knapper
-      buttons.forEach(btn => {
-        btn.classList.remove('bg-denimblue-500', 'text-white', 'border-none');
-        btn.classList.add('hover:bg-denimblue-500', 'hover:text-white', 'border-denimblue-500');
-      });
+    function visTekstfelt() {
+        tekstfeltContainer.classList.remove("hidden");
+    }
 
-      // Tilføj 'active' klasse til den valgte knap
-      button.classList.add('bg-denimblue-500', 'text-white', 'border-none');
+    function skjulTekstfelt() {
+        tekstfeltContainer.classList.add("hidden");
+    }
+
+    normaltKortBtn?.addEventListener("click", () => {
+        visTekstfelt();
+        normaltKortBtn.classList.add("bg-denimblue-500", "text-white", "border-none");
+        julekortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+        nejBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
     });
-  });
+
+    julekortBtn?.addEventListener("click", () => {
+        visTekstfelt();
+        julekortBtn.classList.add("bg-denimblue-500", "text-white", "border-none");
+        normaltKortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+        nejBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+    });
+
+    nejBtn?.addEventListener("click", () => {
+        skjulTekstfelt();
+        nejBtn.classList.add("bg-denimblue-500", "text-white", "border-none");
+        normaltKortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+        julekortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+        window.location.href = "#Kurv";
+    });
+});
+
 </script>
