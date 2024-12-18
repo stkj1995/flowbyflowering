@@ -38,21 +38,25 @@ import Button from "../Button.astro";
 
 <script>
   // kort-script.js
-document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     const normaltKortBtn = document.getElementById("normalt-kort");
     const julekortBtn = document.getElementById("julekort");
     const nejBtn = document.getElementById("nej");
+    const videreKnap = document.querySelector('a[href="#Kurv"]');
     const tekstfeltContainer = document.getElementById("tekstfelt-container");
 
+    let valgtOption = null; // Holder styr på den valgte mulighed
+
     function visTekstfelt() {
-        tekstfeltContainer.classList.remove("hidden");
+        tekstfeltContainer?.classList.remove("hidden");
     }
 
     function skjulTekstfelt() {
-        tekstfeltContainer.classList.add("hidden");
+        tekstfeltContainer?.classList.add("hidden");
     }
 
     normaltKortBtn?.addEventListener("click", () => {
+        valgtOption = "normalt-kort";
         visTekstfelt();
         normaltKortBtn.classList.add("bg-denimblue-500", "text-white", "border-none");
         julekortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
@@ -60,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     julekortBtn?.addEventListener("click", () => {
+        valgtOption = "julekort";
         visTekstfelt();
         julekortBtn.classList.add("bg-denimblue-500", "text-white", "border-none");
         normaltKortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
@@ -67,11 +72,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     nejBtn?.addEventListener("click", () => {
+        valgtOption = "nej";
         skjulTekstfelt();
         nejBtn.classList.add("bg-denimblue-500", "text-white", "border-none");
         normaltKortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
         julekortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
-        window.location.href = "#Kurv";
+    });
+
+    videreKnap?.addEventListener("click", (event) => {
+        if (!valgtOption) {
+            event.preventDefault(); // Forhindrer navigation, hvis ingen mulighed er valgt
+            alert("Vælg venligst en mulighed, før du går videre.");
+        }
     });
 });
 
