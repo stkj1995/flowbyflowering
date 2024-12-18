@@ -1,17 +1,27 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
+ import Header from "../components/Header.astro";
+import Hero1 from "../components/forsidecompo/Hero1.astro";
+import Topafsnit from "../components/forsidecompo/Topafsnit.astro";
+import Galleri from "../components/forsidecompo/Galleri.astro";
+import Baeredygtighed from "../components/forsidecompo/Baeredygtighed.astro";
+import Proces from "../components/forsidecompo/Proces.astro";
+import Instagram from "../components/forsidecompo/Insta.astro";
+import Anmeldelser from "../components/Anmeldelser.astro";
 import Slutcta from "../components/Slutcta.astro";
 import Nyhedsbrev from "../components/Nyhedsbrev.astro";
-
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 <MainLayout title="Flow by Flowering">
-	
+	<Header></Header>
+	<Hero1></Hero1>
+	<Topafsnit></Topafsnit>
+	<Galleri></Galleri>
+	<Baeredygtighed></Baeredygtighed>
+	<Proces></Proces>
+	<Anmeldelser></Anmeldelser>
+	<Instagram></Instagram>
 	<Nyhedsbrev></Nyhedsbrev>
 	<Slutcta></Slutcta>
-	
 </MainLayout>
 
 
