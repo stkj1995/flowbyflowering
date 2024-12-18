@@ -1,9 +1,9 @@
 ---
-import Image from "astro/components/Image.astro";
+import { Image } from 'astro:assets';
 import Button from "../Button.astro";
-import classicbuket from '../../assets/images/classicbuket.webp'
-import biedermeier from '../../assets/images/biedermeyer.webp'
-import scandinavian from '../../assets/images/scandinavian.webp'
+import classicbuket from '../../assets/images/classicbuket.webp';
+import biedermeier from '../../assets/images/biedermeyer.webp';
+import scandinavian from '../../assets/images/scandinavian.webp';
 ---
 
 <section class=" bg-rosa-500 md:px-32 md:pb-28">
@@ -11,7 +11,7 @@ import scandinavian from '../../assets/images/scandinavian.webp'
     <div class="class">
         <div class="text-center md:pb-10 md:pt-20">
             <h2 class="text-blue-500 font-WindstoneSerif md:text-40 md:pb-6">Vælg din favoritbuket</h2>
-            <p class="font-LivvicRegular text-darkgreyblue-500 md:pb-8">Vælg mellem tre smukke stilarter, der passer til enhver smag og lejlighed. <br> Uanset om du ønsker en klassisk buket, en luftig markbuket eller et stilrent skandinavisk design, har vi noget for dig.  
+            <p class="font-LivvicRegular text-darkgreyblue-500 md:pb-8">Vælg mellem tre smukke stilarter, der passer til enhver smag og lejlighed. <br> Uanset om du ønsker en klassisk buket, en luftig markbuket eller et stilrent skandinavisk design, har vi noget for dig. 
                 <br> <br> <span class="font-[700]">Klik på billederne for at se dem i større format</span></p>
         </div>
     </div>
@@ -28,7 +28,7 @@ import scandinavian from '../../assets/images/scandinavian.webp'
                 </div>
                 <div class="txt ">
                     <h3 class="font-WindstoneSerif md:text-30 text-blue-500 md:pl-28 md:pt-5 md:pb-5">Classic</h3>
-                    <p class="font-LivvicRegular text-20 text-darkgreyblue-500 md:pl-2 md:pb-4">En tætbundet buket har siden 1945 været danskernes foretrukne gaveartikel. <br> En Classic er rund, lav og tætbundet <br> og en vaskeægte klassiker.</p>
+                    <p class="font-LivvicRegular text-center text-20 text-darkgreyblue-500 md:pl-2 md:pb-4">En tætbundet buket har siden 1945 været danskernes foretrukne gaveartikel. <br> En Classic er rund, lav og tætbundet <br> og en vaskeægte klassiker.</p>
                     <!-- knap og txt -->
                     <div class="md:pt-4 md:pl-20">
                         <p class="font-[700] font-LivvicRegular text-darkgreyblue-500 text-20 md:pl-[38px]">fra 994,-</p>
@@ -60,7 +60,7 @@ import scandinavian from '../../assets/images/scandinavian.webp'
                 </div>
                 <div class="txt ">
                     <h3 class="font-WindstoneSerif md:text-30 text-blue-500 md:pl-24 md:pt-5 md:pb-5">Biedermeier</h3>
-                    <p class="font-LivvicRegular text-20 text-darkgreyblue-500 md:pl-2 md:pb-4"> Vores take på en Biedermeier-buket byder på en smuk sammensætning af luftige, vilde markblomster. En buket, der virkelig trender og for alvor bringer naturen ind i hjemmet.</p>
+                    <p class="font-LivvicRegular text-center text-20 text-darkgreyblue-500 md:pl-2 md:pb-4"> Vores take på en Biedermeier-buket byder på en smuk sammensætning af luftige, vilde markblomster. En buket, der virkelig trender og for alvor bringer naturen ind i hjemmet.</p>
              <!-- knap og txt -->
              <div class="md:pt-[14px] md:pl-20">
                 <p class="font-[700] font-LivvicRegular text-darkgreyblue-500 text-20 md:pl-[38px]">fra 1.054,-</p>
@@ -93,7 +93,7 @@ import scandinavian from '../../assets/images/scandinavian.webp'
                 </div>
                 <div class="txt ">
                     <h3 class="font-WindstoneSerif md:text-30 text-blue-500 md:pl-20 md:pt-5 md:pb-5">Scandinavian</h3>
-                    <p class="font-LivvicRegular text-20 text-darkgreyblue-500 md:pl-2 md:pb-4">Flowerings Scandinavian er skabt ud fra Skandinaviske tendenser med skarpe, rene linjer. Et helt enkelt udtryk, der skaber ro for øjet og definition til hjemmet. </p>
+                    <p class="font-LivvicRegular text-center text-20 text-darkgreyblue-500 md:pl-2 md:pb-4">Flowerings Scandinavian er skabt ud fra Skandinaviske tendenser med skarpe, rene linjer. Et helt enkelt udtryk, der skaber ro for øjet og definition til hjemmet. </p>
                      <!-- knap og txt -->
              <div class="md:pt-[14px] md:pl-20">
                 <p class="font-[700] font-LivvicRegular text-darkgreyblue-500 text-20 md:pl-[38px]">fra 1.084,-</p>

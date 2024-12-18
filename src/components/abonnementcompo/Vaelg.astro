@@ -1,0 +1,92 @@
+---
+import { Image } from 'astro:assets';
+import Button from "../Button.astro";
+import classicbuket from '../../assets/images/classicbuket.webp';
+import biedermeier from '../../assets/images/biedermeyer.webp';
+
+---
+
+<section id="Vaelg" class="bg-rosa-500 md:px-32 md:pb-28">
+    <!-- TEXT -->
+    <div class="class">
+        <div class="text-center md:pb-10 md:pt-20">
+            <h2 class="text-blue-500 font-WindstoneSerif md:text-40 md:pb-6 md:pt-20">Vælg et bæredygtigt abonnement</h2>
+            <p class="font-LivvicRegular text-darkgreyblue-500 md:pb-8">Kunne du tænke dig blomster leveret fast? <br> Med vores abonnement vælger du stilen, og vi sørger for blomsterne – altid en skøn overraskelse. <br> Vælg mellem Classic, Biedermeier eller Scandinavian stil.
+                <br> <br> <span class="font-[700]">Klik på billederne for at se dem i større format</span></p>
+        </div>
+    </div>
+
+    <!-- CARDS -->
+    <div class="alt md:grid md:grid-cols-2 md:pl-7 md:gap-9">
+        <div class="card1 flex justify-center items-center">
+            <!-- Card 1 -->
+            <div class="text-center">
+                <Image 
+                    src={classicbuket} 
+                    alt="billede af lille buket blomster" 
+                    width={300} 
+                    height={300} 
+                    class="md:w-80 md:h-80 rounded-40 md:rounded-40 ml-20 md:ml-36"
+                />
+                <div class="txt">
+                    <h3 class="font-WindstoneSerif text-center md:text-30 text-blue-500 md:pt-5 md:pb-5">Løbende abonnement</h3>
+                    <p class="font-LivvicRegular text-center text-20 text-darkgreyblue-500 md:pl-0 md:pb-4 md:px-20">Dette er et abonnement der fornyer sig selv, og pengene bliver trukket hver måned. 
+                        Det kan opsiges senest 2 dage inden din næste forsendelse.</p>
+                    <!-- knap og txt -->
+                    <div class="md:pt-4">
+                        <a href="">
+                            <div class="pt-4">
+                                <div class="w-96 text-center md:w-[150px] ml-10 md:ml-52">
+                                    <Button 
+                                        textMobile="Vælg"
+                                        textDesktop="Vælg"
+                                        link=""
+                                        backgroundColor="#2B3D5A"
+                                        textColor="#FFF"
+                                        size="small md:large"
+                                    />
+                                </div>
+                            </div>
+                        </a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card2 flex justify-center items-center">
+            <!-- Card 2 -->
+            <div class="text-center">
+                <Image 
+                    src={biedermeier} 
+                    alt="billede af lille buket blomster" 
+                    width={300} 
+                    height={300} 
+                    class="md:w-80 md:h-80 rounded-40 md:rounded-40 ml-20 md:ml-36"
+                />
+                <div class="txt">
+                    <h3 class="font-WindstoneSerif text-center md:text-30 text-blue-500 md:pt-5 md:pb-5">Forudbetalt abonnement</h3>
+                    <p class="font-LivvicRegular text-center text-20 text-darkgreyblue-500 md:pr-2 md:pb-4 md:px-14">Dette er et abonnement, der automatisk stopper efter den forudbetalte periode du har valgt. 
+                        Det er oplagt som gave til en du holder af.</p>
+                    <!-- knap og txt -->
+                    <div class="md:pt-[14px]">
+                        <a href="">
+                            <div class="pt-4">
+                                <div class="w-96 text-center md:w-[150px] ml-10 md:ml-60">
+                                    <Button 
+                                        textMobile="Vælg"
+                                        textDesktop="Vælg"
+                                        link=""
+                                        backgroundColor="#2B3D5A"
+                                        textColor="#FFF"
+                                        size="small md:large"
+                                    />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
