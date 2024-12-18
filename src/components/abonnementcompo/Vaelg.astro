@@ -1,42 +1,39 @@
 ---
 import { Image } from 'astro:assets';
 import Button from "../Button.astro";
-import classicbuket from '../../assets/images/classicbuket.webp';
-import biedermeier from '../../assets/images/biedermeyer.webp';
+import loebende from '../../assets/images/loebende.svg';
+import forudbetalt from '../../assets/images/forudbetalt.svg';
+
 
 ---
 
-<section id="Vaelg" class="bg-rosa-500 md:px-32 md:pb-28">
+<section id="Vaelg" class="bg-rosa-500 md:px-32 md:pb-28 pt-10 md:pt-40">
     <!-- TEXT -->
     <div class="class">
-        <div class="text-center md:pb-10 md:pt-20">
-            <h2 class="text-blue-500 font-WindstoneSerif text-40 md:pb-6 md:pt-20">Vælg et bæredygtigt abonnement</h2>
-            <p class="font-LivvicRegular text-darkgreyblue-500 text-18 md:pb-8">Kunne du tænke dig blomster leveret fast? <br> Med vores abonnement vælger du stilen, og vi sørger for blomsterne – altid en skøn overraskelse. <br> Vælg mellem Classic, Biedermeier eller Scandinavian stil.
-                <br> <br> <span class="font-[700]">Klik på billederne for at se dem i større format</span></p>
+        <div class="text-center md:pb-5 md:pt-20">
+            <h2 class="text-40 pb-9 text-blue-500 font-WindstoneSerif md:text-50 md:pb-6">Vælg et bæredygtigt abonnement</h2>
+            <p class="text-18 px-16 md:text-18 pb-8 font-LivvicRegular text-darkgreyblue-500 md:pb-8">Kunne du tænke dig blomster leveret fast? <br> Med vores abonnement vælger du stilen, og vi sørger for blomsterne – altid en skøn overraskelse. <br> Vælg mellem Classic, Biedermeier eller Scandinavian stil.</p>
         </div>
     </div>
 
     <!-- CARDS -->
-    <div class="alt md:grid md:grid-cols-2 md:pl-7 md:gap-9">
-        <div class="card1 flex justify-center items-center">
+    <div class="alt flex overflow-x-auto space-x-12 gap-10 md:gap-0 md:space-x-0 md:grid md:grid-cols-2 md:overflow-x-visible">
+        
+        <div class="card1 flex-shrink-0 w-[80%] md:w-full flex ml-16 md:ml-0">
             <!-- Card 1 -->
-            <div class="text-center ">
-                <Image 
-                    src={classicbuket} 
-                    alt="billede af lille buket blomster" 
-                    width={300} 
-                    height={300} 
-                    class="w-[450px] h-[450px] md:w-80 md:h-80 rounded-40 md:rounded-40 ml-20 md:ml-36"
-                />
-                <div class="txt">
-                    <h3 class="font-WindstoneSerif text-center md:text-30 text-blue-500 md:pt-5 md:pb-5">Løbende abonnement</h3>
-                    <p class="font-LivvicRegular text-center text-18 text-darkgreyblue-500 md:pl-0 md:pb-4 md:px-20">Dette er et abonnement der fornyer sig selv, og pengene bliver trukket hver måned. 
-                        Det kan opsiges senest 2 dage inden din næste forsendelse.</p>
+             <div class="pb-16 pt-4">
+                <div class="grid place-content-center py-6">
+                    <Image src={loebende} alt='billede af lille buket blomster' class="w-[450px] h-[450px] rounded-40 md:w-[350px] md:h-[350px] md:rounded-40">
+                </div>
+                <div class="txt ">
+                    <h3 class="font-WindstoneSerif text-30 md:text-40 text-center py-4 text-blue-500 md:pt-5 md:pb-5">Løbende abonnement</h3>
+                    <p class="px-10 pl-16 font-LivvicRegular text-center text-18 md:text-18 text-darkgreyblue-500 md:px-4 md:mx-20 md:pl-2 md:pb-4 md:text-center">Dette er et abonnement der fornyer sig selv, og pengene bliver trukket så ofte du ønsker. 
+                        Det kan opsiges senest 2 dage inden din næste forsendelse</p>
                     <!-- knap og txt -->
-                    <div class="md:pt-4 grid place-items-center">
+                    <div class="pt-8 grid place-items-center md:grid md:place-items-center md:pt-4">
                         <a href="">
-                            <div class="pt-4">
-                                <div class="w-36 text-center md:w-[150px] ml-10 md:ml-52">
+                            <div class="pt-4 md:relative md:left-1">
+                                <div class="w-36 text-center relative  md:relative md:left-0 md:w-[150px]">
                                     <Button 
                                         textMobile="Vælg"
                                         textDesktop="Vælg"
@@ -50,43 +47,53 @@ import biedermeier from '../../assets/images/biedermeyer.webp';
                         </a>
                     </div> 
                 </div>
-            </div>
+             </div>
         </div>
 
+    <!-- Card 2 -->
+    <div class="card2 flex-shrink-0 w-[80%] md:w-full">
         <!-- Card 2 -->
-        <div class="card2 flex justify-center items-center">
-            <!-- Card 2 -->
-            <div class="text-center">
-                <Image 
-                    src={biedermeier} 
-                    alt="billede af lille buket blomster" 
-                    width={300} 
-                    height={300} 
-                    class="w-[450px] h-[450px] md:w-80 md:h-80 rounded-40 md:rounded-40 ml-20 md:ml-36"
-                />
-                <div class="txt">
-                    <h3 class="font-WindstoneSerif text-center md:text-30 text-blue-500 md:pt-5 md:pb-5">Forudbetalt abonnement</h3>
-                    <p class="font-LivvicRegular text-center text-18 text-darkgreyblue-500 md:pr-2 md:pb-4 md:px-14">Dette er et abonnement, der automatisk stopper efter den forudbetalte periode du har valgt. 
-                        Det er oplagt som gave til en du holder af.</p>
-                    <!-- knap og txt -->
-                    <div class="grid place-items-center md:pt-[14px]">
-                        <a href="">
-                            <div class="pt-4">
-                                <div class="w-36 text-center md:w-[150px] ml-10 md:ml-60">
-                                    <Button 
-                                        textMobile="Vælg"
-                                        textDesktop="Vælg"
-                                        link=""
-                                        backgroundColor="#2B3D5A"
-                                        textColor="#FFF"
-                                        size="small md:large"
-                                    />
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+         <div class="pb-16 pt-4">
+            <div class="grid place-content-center py-6">
+                <Image src={forudbetalt} alt='billede af lille buket blomster' class="w-[450px] h-[450px] rounded-40 md:w-[350px] md:h-[350px] md:rounded-40">
             </div>
-        </div>
+            <div class="txt ">
+                <h3 class="font-WindstoneSerif text-30 md:text-40 text-center py-4 text-blue-500 md:pt-5 md:pb-5">Forudbetalt abonnement</h3>
+                <p class="px-10 pl-16 font-LivvicRegular text-center text-18 md:text-18 md:px-4 md:mx-20 text-darkgreyblue-500 md:pl-2 md:pb-4 md:text-center">Dette er et abonnement der automatisk stopper efter den forudbetalte periode du har valgt. 
+                    Det er oplagt som gave til en du holder af. </p>
+                <!-- knap og txt -->
+                <div class="pt-8 grid place-items-center md:grid md:place-items-center md:pt-10">
+                    <a href="">
+                        <div class="pt-4 md:relative md:left-1">
+                            <div class="w-36 text-center relative  md:relative md:left-0 md:w-[150px]">
+                                <Button 
+                                    textMobile="Vælg"
+                                    textDesktop="Vælg"
+                                    link=""
+                                    backgroundColor="#2B3D5A"
+                                    textColor="#FFF"
+                                    size="small md:large"
+                                />
+                            </div>
+                        </div>
+                    </a>
+                </div> 
+            </div>
+         </div>
     </div>
+
+
+    
+
+
+
+
+
+
+
+
+ 
 </section>
+
+
+
