@@ -6,11 +6,12 @@ import Button from '../Button.astro';
 
 
 <section class="bg-beige-500 md:pt-20 md:pb-20 flex justify-center flex-col md:gap-0 pt-20 pb-20 font-WindstoneSerif">
-    <h2 class="text-blue-500 text-center md:text-left text-50 font-WindstoneSerif md:ml-20 my-sm">Vores blomstertyper</h2>
+    <h2 class="text-blue-500 text-center md:text-left text-50 font-WindstoneSerif md:ml-24 my-sm">Vores blomstertyper</h2>
 
     <div class="flex flex-col justify-center md:flex-row md:gap-28 md:px-20">
+        
         <!-- Sektion 1 -->
-        <div class="w-96 mx-auto md:m-0 my-sm d:my-m" x-data="{ open: false }">
+        <div class="w-96 mx-auto md:m-6 my-sm d:my-sm" x-data="{ open: false }">
             <!-- Overskrift -->
             <h3 class="text-md text-center text-blue-500 sm:text-lg text-30 md:text-40 md:text-left font-WindstoneSerif mb-sm md:mb-m md:leading-tight text-nowrap">
                 Danske blomster
@@ -29,69 +30,70 @@ import Button from '../Button.astro';
             </div>
 
             <!-- Læs mere-knap (CTA styling) -->
-            <div class="text-center mt-4">
+            <div class="text-center md:text-left mt-4">
                 <button @click="open = !open"
-                    class="bg-greyblue-500 text-white text-center rounded-20 transition-all duration-300 ease-in-out px-4 py-2 md:px-6 md:py-3 font-LivvicRegular font-bold text-16 md:text-18 mx-auto block max-w-[450px]">
+                    class="bg-greyblue-500 text-white text-center rounded-20 transition-all duration-300 ease-in-out px-4 py-2 md:px-6 md:py-3 font-LivvicRegular font-bold text-16 md:text-18 mx-auto md:ml-0 block max-w-[450px]">
                     <span x-text="open ? 'Læs mindre' : 'Læs mere'"></span>
                 </button>
             </div>
         </div>
 
         <!-- Sektion 2 -->
-        <div class="w-96 mx-auto md:m-0 my-sm md:my-m" x-data="{ open: false }">
+        <div class="w-96 mx-auto md:m-0 my-sm md:my-sm" x-data="{ open: false }">
             <!-- Overskrift -->
             <h3 class="text-md text-center text-blue-500 sm:text-lg text-30 md:text-40 md:text-left font-WindstoneSerif mb-sm md:mb-m md:leading-tight text-nowrap">
                 Friske overskudsblomster
             </h3>
-
+        
             <!-- Kort Brødtekst -->
             <p class="text-darkgreyblue-500 px-5 md:px-0 text-20 md:text-20 text-center md:text-left sm:text-m font-LivvicRegular">
-                For at undgå unødigt blomsterspild har vi eksklusive aftaler med blomster-transportører, som forhandler blomster til fysiske blomsterbutikker.
+                For at undgå unødigt blomsterspild har vi eksklusive aftaler med blomster-transportører, som forhandler blomster til fysiske blomsterbutikker.
             </p>
-
+        
             <!-- Ekstra tekst (vises lige under brødteksten) -->
             <div x-show="open" x-transition class="overflow-hidden mt-2">
                 <p class="text-darkgreyblue-500 px-5 md:px-0 text-20 md:text-20 text-center md:text-left sm:text-m font-LivvicRegular">
                     Hos blomstertransportørerne er salget ofte mindre end lageret, hvilket resulterer i, at de ellers friske blomster, som ikke bliver solgt, smides ud. Derfor er det vores fornemmeste opgave at anvende de overskudsblomster, der stadig er friske som komponent til vores miljøbuket.
                 </p>
             </div>
-
+        
             <!-- Læs mere-knap (CTA styling) -->
-            <div class="text-center mt-4">
+            <div class="text-center md:text-left mt-4">
                 <button @click="open = !open"
-                    class="bg-greyblue-500 text-white text-center rounded-20 transition-all duration-300 ease-in-out px-4 py-2 md:px-6 md:py-3 font-LivvicRegular font-bold text-16 md:text-18 mx-auto block max-w-[450px]">
+                    class="bg-greyblue-500 text-white text-center rounded-20 transition-all duration-300 ease-in-out px-4 py-2 md:px-6 md:py-3 font-LivvicRegular font-bold text-16 md:text-18 mx-auto md:ml-0 block max-w-[450px]">
                     <span x-text="open ? 'Læs mindre' : 'Læs mere'"></span>
                 </button>
             </div>
         </div>
+        
 
         <!-- Sektion 3 -->
-        <div class="w-96 mx-auto md:m-0 my-sm md:my-m" x-data="{ open: false }">
+        <div class="w-96 mx-auto md:m-0 my-sm md:my-sm" x-data="{ open: false }">
             <!-- Overskrift -->
             <h3 class="text-md text-center text-blue-500 sm:text-lg text-30 md:text-40 md:text-left font-WindstoneSerif mb-sm md:mb-m md:leading-tight text-nowrap">
                 Certificerede blomster
             </h3>
-
+        
             <!-- Kort Brødtekst -->
             <p class="text-darkgreyblue-500 px-5 md:px-0 text-20 md:text-20 text-center md:text-left sm:text-m font-LivvicRegular">
                 Vi supplerer vores udvalg med blomster fra miljøcertificerede gartnerier, som bliver tjekket for deres brug af kunstgødning, sprøjtemidler, affaldssortering,
             </p>
-
+        
             <!-- Ekstra tekst (vises lige under brødteksten) -->
             <div x-show="open" x-transition class="overflow-hidden mt-2">
                 <p class="text-darkgreyblue-500 px-5 md:px-0 text-20 md:text-20 text-center md:text-left sm:text-m font-LivvicRegular">
                     vandspild og ikke mindst arbejdsvilkårene for deres ansatte. Disse gartnerier findes forskellige steder i verden, og ofte i klimaer hvor det er mest naturligt at dyrke afskårne blomster. Vi prioriterer følgende certificeringer: BIO, MPS, GLOBAL G.A.P, FLORVERDE.
                 </p>
             </div>
-
+        
             <!-- Læs mere-knap (CTA styling) -->
-            <div class="text-center mt-4">
+            <div class="text-center md:text-left mt-4">
                 <button @click="open = !open"
-                    class="bg-greyblue-500 text-white text-center rounded-20 transition-all duration-300 ease-in-out px-4 py-2 md:px-6 md:py-3 font-LivvicRegular font-bold text-16 md:text-18 mx-auto block max-w-[450px]">
+                    class="bg-greyblue-500 text-white text-center rounded-20 transition-all duration-300 ease-in-out px-4 py-2 md:px-6 md:py-3 font-LivvicRegular font-bold text-16 md:text-18 mx-auto md:ml-0 block max-w-[450px]">
                     <span x-text="open ? 'Læs mindre' : 'Læs mere'"></span>
                 </button>
             </div>
-        </div>
+        </div>        
     </div>
 </section>
 
