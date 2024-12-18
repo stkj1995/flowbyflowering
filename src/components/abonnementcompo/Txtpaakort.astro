@@ -11,8 +11,8 @@ import Button from "../Button.astro";
   <div id="tekstfelt-container" class="mt-4">
     <textarea
       id="tekstfelt"
-      class="w-full max-w-lg p-4 border-2 border-darkgreyblue-500 rounded-20 text-darkgreyblue-500 focus:outline-none focus:ring-2 focus:ring-denimblue-500"
-      rows="4"
+      class="w-full max-w-lg pr-32 md:pr-80 border-2 bg-white border-darkgreyblue-500 rounded-20 text-darkgreyblue-500 focus:outline-none focus:ring-1 focus:ring-denimblue-500"
+      rows="10"
       placeholder="Skriv din tekst her..."
     ></textarea>
   </div>
@@ -73,13 +73,6 @@ import Button from "../Button.astro";
         nejBtn.classList.add("bg-denimblue-500", "text-white", "border-none");
         normaltKortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
         julekortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
-    });
-
-    videreKnap?.addEventListener("click", (event) => {
-        if (!valgtOption) {
-            event.preventDefault(); // Forhindrer navigation, hvis ingen mulighed er valgt
-            alert("Vælg venligst en mulighed, før du går videre.");
-        }
     });
 });
 </script>

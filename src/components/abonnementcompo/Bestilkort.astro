@@ -78,13 +78,5 @@ import Button from "../Button.astro";
         normaltKortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
         julekortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
     });
-
-    videreKnap?.addEventListener("click", (event) => {
-        if (!valgtOption) {
-            event.preventDefault(); // Forhindrer navigation, hvis ingen mulighed er valgt
-            alert("Vælg venligst en mulighed, før du går videre.");
-        }
-    });
 });
-
 </script>
