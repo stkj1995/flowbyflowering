@@ -10,31 +10,83 @@ import classiclight from '../../assets/images/classiclight.webp';
     <p class="font-LivvicRegular text-darkgreyblue-500 text-18 pb-14 pr-20 ">Her kan du se en oversigt over din valg. Du har mulighed for at redigere din valg, hvis du pludseligt skifter mening.</p>
    </div>
 
-   <!-- indkøbskurv -->
-   <div class="bg-greyblue-500 text-white mx-5 rounded-40 pl-10 pt-16 pb-20">
-    <h2 class="text-40 pb-10 font-WindstoneSerif">Din indkøbskurv</h2>
-        <div class="gridkurv grid grid-cols-2 space-x-10 ">
-            <div class="indhold text-18 font-LivvicRegular">
-                <p class="font-[700] pb-6">Abonnement</p>
-                <p class="pb-3">Forudbetalt abonnement</p>
-                <p class="pb-3">Classic</p>
-                <p class="pb-3">Light</p>
-                <p class="pb-3">3 gange</p>
-                <p class="pb-3">Hver uge</p>
-                <p class="pb-3">Ingen kort</p>
-                <!-- pris skal evt være i div for sig selv -->
-                <p class="font-[700] pt-8">Pris:</p>
-                <p class="pt-3">1.084,-</p>
-                <p class="font-[700] pt-14 underline">Rediger valg</p>
+   <!-- indkøbskurv + betalingskurv -->
+<div class="alt">
+    <!-- indkøbskurv -->
+    <div class="bg-greyblue-500 text-white mx-5 rounded-40 pl-10 pt-16 pb-20">
+        <h2 class="text-40 pb-10 font-WindstoneSerif">Din indkøbskurv</h2>
+            <div class="gridkurv grid grid-cols-2 space-x-10 ">
+                <div class="indhold text-18 font-LivvicRegular">
+                    <p class="font-[700] pb-6">Abonnement</p>
+                    <p class="pb-3">Forudbetalt abonnement</p>
+                    <p class="pb-3">Classic</p>
+                    <p class="pb-3">Light</p>
+                    <p class="pb-3">3 gange</p>
+                    <p class="pb-3">Hver uge</p>
+                    <p class="pb-3">Ingen kort</p>
+                    <!-- pris skal evt være i div for sig selv -->
+                    <p class="font-[700] pt-8">Pris:</p>
+                    <p class="pt-3">1.084,-</p>
+                    <p class="font-[700] pt-14 underline">Rediger valg</p>
+                </div>
+    
+                <div class="">
+                    <p class="font-[700] pb-6">Antal</p>
+                    <p>1</p>
+                </div>
             </div>
-
-            <div class="">
-                <p class="font-[700] pb-6">Antal</p>
-                <p>1</p>
-            </div>
+    </div>
+    <!-- betalingsskurv -->
+    <div class="bg-greyblue-500 text-white mx-5 rounded-40 pl-10 pt-16 pb-20">
+        <h2 class="text-40 pb-10 font-WindstoneSerif">Købsoversigt</h2>
+        <div class="grid grid-cols-2 text-18">
+            <p class="font-LivvicRegular font-[700]">Subtotal</p>
+            <p>1.084,-</p>
         </div>
+        <div class="grid grid-cols-2 text-18">
+            <p class="font-LivvicRegular font-[700]">Total</p>
+            <p>1.084,-</p>
+            <p class="grid col-start-2">(inkluderer 216,8,- moms)</p>
+        </div>
+        <div class="grid place-items-center">
+            <a href="">
+                <div class="pt-4 md:relative md:left-1">
+                    <div class="w-56 text-center relative  md:relative md:left-0 md:w-[150px]">
+                        <Button 
+                            textMobile="Gå til betaling"
+                            textDesktop="Vælg"
+                            link=""
+                            backgroundColor="#ffffff"
+                            textColor="#00054E"
+                            size="small md:large"
+                        />
+                    </div>
+                </div>
+            </a>
+        </div>
+      
 
-   </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+ 
 
 
 
