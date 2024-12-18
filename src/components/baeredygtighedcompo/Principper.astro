@@ -1,5 +1,5 @@
 ---
-import { animate } from '@motionone/dom'; // Import Motion One
+// import { animate } from '@motionone/dom'; 
 import { Image } from 'astro:assets';
 
 import dokumentation from '../../assets/images/dokumentation.webp';
@@ -11,7 +11,7 @@ import gennemsigtighed from '../../assets/images/gennemsigtighed.webp';
 import Button from "../Button.astro";
 ---
 
-<section class="bg-rosa-500 py-12 px-4">
+<section class="bg-rosa-500 py-12 px-4 animate__animated animate__fadeInUp animate__delay-0.5s">
   <div class="max-w-6xl mx-auto text-center">
     <h2 
       id="section-title"
@@ -103,7 +103,7 @@ import Button from "../Button.astro";
   </div>
 </section>
 
-<script>
+<!-- <script>
   import { animate } from '@motionone/dom';
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -119,4 +119,4 @@ import Button from "../Button.astro";
       animate(card, { opacity: [0, 1], translate: [30, 0] }, { duration: 0.8, delay: index * 0.2 });
     });
   });
-</script>
+</script> -->
