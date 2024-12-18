@@ -7,27 +7,27 @@ import Nyhedsbrev2 from '../assets/images/nyhedsbrev2.png'
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-<section class="bg-rosa-500 md:grid md:grid-cols-2 md:gap-0 pt-10 pb-20 px-5 md:px-20 md:pt-20 md:pb-20">
+<section class="bg-rosa-500 md:grid md:grid-cols-2 md:gap-0 pt-10 pb-20 px-5 md:px-20 md:pt-20 md:pb-20 animate__animated animate__fadeInUp animate__delay-0.5s">
     <!-- Tekst og formular til højre -->
-    <div class="flex flex-col justify-center bg-rosa-500 p-10 max-w-3xl mx-auto">
+    <div class="flex flex-col justify-center bg-rosa-500 p-10 max-w-3xl mx-auto ">
       <!-- Overskrift -->
       <h2 class="text-blue-500 text-50 font-WindstoneSerif mb-sm md:leading-tight">
         Vil du blomstre med os?
       </h2>
   
       <!-- Brødtekst -->
-      <p class="text-darkgreyblue-500 font-LivvicRegular text-20 mb-sm">
+      <p class="text-darkgreyblue-500 font-LivvicRegular text-18 mb-sm md:pr-12">
         Få det bedste fra Flowering direkte i din indbakke. Modtag inspiration, tips til blomsterpleje, eksklusive tilbud og nyheder om vores bæredygtige rejse.
       </p>
   
       <!-- Formular -->
-      <form class="flex flex-col gap-sm">
+      <form class="flex flex-col gap-sm md:w-80">
         <input
           type="text"
           id="name"
           name="name"
           placeholder="Navn"
-          class="rounded-20 border-1 border-greyblue-500 p-2 focus:ring-1 focus:ring-greyblue-600 focus:outline-none"
+          class="rounded-20 border-1 border-greyblue-500 p-2 focus:ring-1 focus:ring-greyblue-600 focus:outline-none pl-6"
         />
   
         <input
@@ -35,16 +35,16 @@ import Nyhedsbrev2 from '../assets/images/nyhedsbrev2.png'
           id="email"
           name="email"
           placeholder="Email"
-          class="rounded-20 border-1 border-greyblue-500 p-2 focus:ring-1 focus:ring-greyblue-600 focus:outline-none"
+          class="rounded-20 border-1 border-greyblue-500 p-2 focus:ring-1 focus:ring-greyblue-600 focus:outline-none pl-6"
         />
   
            <!-- CTA Knappen -->
-           <div class="text-center mt-12 text-nowrap">
+           <div class="text-center mt-6 text-nowrap">
             <Button 
             textMobile="Tilmeld dig vores nyhedsbrev"
             textDesktop="Tilmeld dig vores nyhedsbrev"
             link="/baeredygtighed" 
-            backgroundColor="#2B3D5A" 
+            backgroundColor="#6D7D96" 
             textColor="#ffffff" 
             size="small md:large"
             additionalClasses="hover:bg-[#6D7D96] mx-auto ml-0"
@@ -57,12 +57,12 @@ import Nyhedsbrev2 from '../assets/images/nyhedsbrev2.png'
     <div class="w-full flex flex-row gap-4 justify-between">
       <!-- Billede 1 -->
       <div class="w-full md:w-[48%]">
-        <Image src={Nyhedsbrev1} alt='billede af en holdt buket' class="mt-2 rounded-40 w-full h-auto object-cover md:h-[90%] md:w-full md:object-cover md:mt-2 animate__animated animate__fadeInRight animate__delay-0.5s">
+        <Image src={Nyhedsbrev1} alt='billede af en holdt buket' class="mt-2 rounded-40 w-full h-auto object-cover md:h-[90%] md:w-full md:object-cover md:mt-2 ">
       </div>
 
       <!-- Billede 2 -->
       <div class="w-full md:w-[48%]">
-        <Image src={Nyhedsbrev2} alt='billede af pige med to buketter' class="mt-16 rounded-40 w-full h-[65%] object-cover md:h-[70%] md:w-full md:object-cover md:mt-28 animate__animated animate__fadeInRight animate__delay-1s">
+        <Image src={Nyhedsbrev2} alt='billede af pige med to buketter' class="mt-16 rounded-40 w-full h-[65%] object-cover md:h-[70%] md:w-full md:object-cover md:mt-28 ">
       </div>
     </div>
 </section>
