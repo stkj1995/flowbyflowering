@@ -15,20 +15,20 @@ import Button from "../Button.astro";
   <div class="max-w-6xl mx-auto text-center">
     <h2 
       id="section-title"
-      class="text-blue-500 text-40 md:text-50 font-WindstoneSerif mb-6 leading-tight"
+      class="text-blue-500 text-40 md:text-50 font-WindstoneSerif mb-10 leading-tight"
     >
       Principper til glæde for verden
     </h2>
     <p 
       id="section-description"
-      class="font-LivvicRegular text-18 text-darkgreyblue-500 mb-12 max-w-2xl mx-auto leading-tight"
+      class="font-LivvicRegular text-18 text-darkgreyblue-500 mb-10 max-w-2xl mx-auto leading-tight"
     >
       Vores kamp for en bedre verden er ikke kun begrænset til vores blomsterudvalg. Tag en tur gennem vores bæredygtige principper nedenfor, og tilmeld dig vores nyhedsbrev for at følge med i vores rejse, når vi løbende indfører nye tiltag.
     </p>
   </div>
 
   <!-- Grid Layout -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
     {[{
       image: dokumentation, 
       title: 'Dokumentation', 
@@ -70,7 +70,7 @@ import Button from "../Button.astro";
           <Image 
             src={image} 
             alt={title} 
-            class="animated-image items-center rounded-40 mx-auto w-[70%] h-[70%] md:w-[100%] md:h-[100%] object-cover hover:scale-105 hover:rotate-2 transition-transform duration-300"
+            class="animated-image items-center mb-10 rounded-40 mx-auto w-[70%] h-[70%] md:w-[100%] md:h-[100%] object-cover hover:scale-105 hover:rotate-2 transition-transform duration-300"
           />
         </div>
         <h3 class="text-30 md:text-40 font-WindstoneSerif mb-2 text-blue-500 leading-tight">{title}</h3>
@@ -98,7 +98,7 @@ import Button from "../Button.astro";
       backgroundColor="#2B3D5A" 
       textColor="#ffffff" 
       size="small md:large"
-      additionalClasses="hover:bg-[#6D7D96] mx-auto max-w-[450px] animate-pulse"
+      additionalClasses="hover:bg-[#6D7D96] mx-auto max-w-[450px]"
     />
   </div>
 </section>
