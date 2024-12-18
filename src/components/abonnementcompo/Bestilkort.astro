@@ -9,13 +9,13 @@ import Button from "../Button.astro";
   
   <!-- Valgmuligheder -->
   <div class="mt-6 grid grid-cols-1 gap-20 md:grid-cols-3">
-    <button class="px-12 py-4 border-2 border-denimblue-500 rounded-20 text-denimblue-500 font-bold hover:bg-greyblue-500 hover:text-white hover:border-none transition duration-200">
+    <button id="til-normalt-kort" class="px-12 py-4 border-2 border-denimblue-500 rounded-20 text-denimblue-500 font-bold hover:bg-greyblue-500 hover:text-white hover:border-none transition duration-200">
       Ja, normalt kort
     </button>
-    <button class="px-12 py-4 border-2 border-denimblue-500 rounded-20 text-denimblue-500 font-bold hover:bg-greyblue-500 hover:text-white hover:border-none transition duration-200">
+    <button id="til-julekort" class="px-12 py-4 border-2 border-denimblue-500 rounded-20 text-denimblue-500 font-bold hover:bg-greyblue-500 hover:text-white hover:border-none transition duration-200">
       Ja, julekort
     </button>
-    <button class="px-12 py-4 border-2 border-denimblue-500 rounded-20 text-denimblue-500 font-bold hover:bg-greyblue-500 hover:text-white hover:border-none transition duration-200">
+    <button id="nej" class="px-12 py-4 border-2 border-darkgreyblue-500 rounded-20 text-darkgreyblue-500 font-bold hover:bg-greyblue-500 hover:text-white hover:border-none transition duration-200">
       Nej
     </button>
   </div>
@@ -34,3 +34,45 @@ import Button from "../Button.astro";
     </div>
   </div>
 </section>
+
+
+<script>
+  // kort-script.js
+document.addEventListener("DOMContentLoaded", () => {
+    const normaltKortBtn = document.getElementById("normalt-kort");
+    const julekortBtn = document.getElementById("julekort");
+    const nejBtn = document.getElementById("nej");
+    const tekstfeltContainer = document.getElementById("tekstfelt-container");
+
+    function visTekstfelt() {
+        tekstfeltContainer.classList.remove("hidden");
+    }
+
+    function skjulTekstfelt() {
+        tekstfeltContainer.classList.add("hidden");
+    }
+
+    normaltKortBtn?.addEventListener("click", () => {
+        visTekstfelt();
+        normaltKortBtn.classList.add("bg-denimblue-500", "text-white", "border-none");
+        julekortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+        nejBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+    });
+
+    julekortBtn?.addEventListener("click", () => {
+        visTekstfelt();
+        julekortBtn.classList.add("bg-denimblue-500", "text-white", "border-none");
+        normaltKortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+        nejBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+    });
+
+    nejBtn?.addEventListener("click", () => {
+        skjulTekstfelt();
+        nejBtn.classList.add("bg-denimblue-500", "text-white", "border-none");
+        normaltKortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+        julekortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+        window.location.href = "#Kurv";
+    });
+});
+
+</script>
