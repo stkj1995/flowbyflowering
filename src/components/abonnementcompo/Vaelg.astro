@@ -6,7 +6,7 @@ import biedermeier from '../../assets/images/biedermeyer.webp';
 
 ---
 
-<section id="Vaelg" class=" bg-rosa-500 md:px-32 md:pb-28">
+<section id="Vaelg" class="bg-rosa-500 md:px-32 md:pb-28">
     <!-- TEXT -->
     <div class="class">
         <div class="text-center md:pb-10 md:pt-20">
@@ -17,30 +17,27 @@ import biedermeier from '../../assets/images/biedermeyer.webp';
     </div>
 
     <!-- CARDS -->
-    <div class="alt md:grid md:grid-cols-3 md:pl-7 md:gap-9">
-        <div class="card1 ">
+    <div class="alt md:grid md:grid-cols-2 md:pl-7 md:gap-9">
+        <div class="card1 flex justify-center items-center">
             <!-- Card 1 -->
-             <div class="">
-                <div class="class">
-                    <Image 
+            <div class="text-center">
+                <Image 
                     src={classicbuket} 
                     alt="billede af lille buket blomster" 
                     width={300} 
                     height={300} 
-                    class="md:w-80 md:h-80 rounded-40 md:rounded-40"
+                    class="md:w-80 md:h-80 rounded-40 md:rounded-40 ml-20 md:ml-36"
                 />
-                
-                </div>
-                <div class="txt ">
-                    <h3 class="font-WindstoneSerif text-center md:text-30 text-blue-500 md:pl-0 md:pt-5 md:pb-5">Løbende abonnement</h3>
+                <div class="txt">
+                    <h3 class="font-WindstoneSerif text-center md:text-30 text-blue-500 md:pt-5 md:pb-5">Løbende abonnement</h3>
                     <p class="font-LivvicRegular text-center text-20 text-darkgreyblue-500 md:pl-2 md:pb-4">Dette er et abonnement der fornyer sig selv, og pengene bliver trukket hver måned. 
                         Det kan opsiges senest 2 dage inden din næste forsendelse.</p>
                     <!-- knap og txt -->
-                    <div class="md:pt-4 md:pl-20">
+                    <div class="md:pt-4">
                         <p class="font-[700] font-LivvicRegular text-darkgreyblue-500 text-20 md:pl-[38px]">fra 994,-</p>
                         <a href="">
-                            <div class="pt-4 md:relative md:left-1">
-                                <div class="w-96 text-center relative left-8  md:relative md:left-0 md:w-[150px]">
+                            <div class="pt-4">
+                                <div class="w-96 text-center md:w-[150px] ml-10 md:ml-60">
                                     <Button 
                                         textMobile="Vælg"
                                         textDesktop="Vælg"
@@ -54,46 +51,44 @@ import biedermeier from '../../assets/images/biedermeyer.webp';
                         </a>
                     </div> 
                 </div>
-             </div>
+            </div>
         </div>
 
-    <!-- Card 2 -->
-        <div class="card2">
+        <!-- Card 2 -->
+        <div class="card2 flex justify-center items-center">
             <!-- Card 2 -->
-             <div class="">
-                <div class="">
+            <div class="text-center">
                 <Image 
                     src={biedermeier} 
                     alt="billede af lille buket blomster" 
                     width={300} 
                     height={300} 
-                    class="md:w-80 md:h-80 rounded-40 md:rounded-40"
+                    class="md:w-80 md:h-80 rounded-40 md:rounded-40 ml-20 md:ml-36"
                 />
-                </div>
-                <div class="txt ">
-                    <h3 class="font-WindstoneSerif text-center md:text-30 text-blue-500 md:pl-0 md:pt-5 md:pb-5 text-nowrap">Forudbetalt abonnement</h3>
+                <div class="txt">
+                    <h3 class="font-WindstoneSerif text-center md:text-30 text-blue-500 md:pt-5 md:pb-5">Forudbetalt abonnement</h3>
                     <p class="font-LivvicRegular text-center text-20 text-darkgreyblue-500 md:pl-2 md:pb-4">Dette er et abonnement der automatisk stopper efter den forudbetalte periode du har valgt. 
-                        Det er oplagt som gave til en du holder af. </p>
-             <!-- knap og txt -->
-             <div class="md:pt-[14px] md:pl-20">
-                <p class="font-[700] font-LivvicRegular text-darkgreyblue-500 text-20 md:pl-[38px]">fra 1.054,-</p>
-                <a href="">
-                    <div class="pt-4 md:relative md:left-3">
-                        <div class="w-96 text-center relative left-8  md:relative md:left-0 md:w-[150px]">
-                            <Button 
-                                textMobile="Vælg"
-                                textDesktop="Vælg"
-                                link=""
-                                backgroundColor="#2B3D5A"
-                                textColor="#FFF"
-                                size="small md:large"
-                            />
-                        </div>
+                        Det er oplagt som gave til en du holder af.</p>
+                    <!-- knap og txt -->
+                    <div class="md:pt-[14px]">
+                        <p class="font-[700] font-LivvicRegular text-darkgreyblue-500 text-20 md:pl-[38px]">fra 1.054,-</p>
+                        <a href="">
+                            <div class="pt-4">
+                                <div class="w-96 text-center md:w-[150px] ml-10 md:ml-60">
+                                    <Button 
+                                        textMobile="Vælg"
+                                        textDesktop="Vælg"
+                                        link=""
+                                        backgroundColor="#2B3D5A"
+                                        textColor="#FFF"
+                                        size="small md:large"
+                                    />
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
                 </div>
-             </div>
+            </div>
         </div>
     </div>
 </section>
