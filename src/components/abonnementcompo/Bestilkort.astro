@@ -2,7 +2,7 @@
 import Button from "../Button.astro";
 ---
 
-<section id="Bestilkort" class="min-h-screen flex flex-col items-center justify-center  text-center p-4">
+<section id="Bestilkort" class="min-h-screen flex flex-col items-center justify-center text-center p-4">
   <!-- Overskrift -->
   <h1 class="text-40 font-WindstoneSerif text-blue-500">Ønsker du et flot kort med til din bestilling?</h1>
   <p class="text-18 font-LivvicRegular text-darkgreyblue-500 mt-2">Vælg én og klik videre</p>
@@ -24,9 +24,10 @@ import Button from "../Button.astro";
   <div class="pt-4 md:mt-8 mt-10">
     <div class="w-36 text-center mx-auto md:w-[150px]">
       <Button 
+        id="videre-klik" 
         textMobile="Videre"
         textDesktop="Videre"
-        link="#Txtpaakort"
+        link="#Txtpaakort" 
         backgroundColor="#2B3D5A"
         textColor="#FFF"
         size="small md:large"
@@ -35,14 +36,12 @@ import Button from "../Button.astro";
   </div>
 </section>
 
-
 <script>
-  // kort-script.js
   document.addEventListener("DOMContentLoaded", () => {
-    const normaltKortBtn = document.getElementById("normalt-kort");
-    const julekortBtn = document.getElementById("julekort");
+    const normaltKortBtn = document.getElementById("til-normalt-kort");
+    const julekortBtn = document.getElementById("til-julekort");
     const nejBtn = document.getElementById("nej");
-    const videreKnap = document.querySelector('a[href="#Kurv"]');
+    const videreKnap = document.getElementById("videre-klik");
     const tekstfeltContainer = document.getElementById("tekstfelt-container");
 
     let valgtOption = null; // Holder styr på den valgte mulighed
@@ -55,28 +54,41 @@ import Button from "../Button.astro";
         tekstfeltContainer?.classList.add("hidden");
     }
 
+    // Klik på normalt kort
     normaltKortBtn?.addEventListener("click", () => {
         valgtOption = "normalt-kort";
         visTekstfelt();
         normaltKortBtn.classList.add("bg-denimblue-500", "text-white", "border-none");
         julekortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
         nejBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+        
+        // Ændre "Videre"-linket til #Txtpaakort
+        videreKnap.setAttribute("href", "#Txtpaakort");
     });
 
+    // Klik på julekort
     julekortBtn?.addEventListener("click", () => {
         valgtOption = "julekort";
         visTekstfelt();
         julekortBtn.classList.add("bg-denimblue-500", "text-white", "border-none");
         normaltKortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
         nejBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+        
+        // Ændre "Videre"-linket til #Txtpaakort
+        videreKnap.setAttribute("href", "#Txtpaakort");
     });
 
+    // Klik på nej
     nejBtn?.addEventListener("click", () => {
         valgtOption = "nej";
         skjulTekstfelt();
         nejBtn.classList.add("bg-denimblue-500", "text-white", "border-none");
         normaltKortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
         julekortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+        
+        // Ændre "Videre"-linket til #Kurv, så den hopper direkte til kurven
+        videreKnap.setAttribute("href", "#Kurv");
     });
-});
+  });
 </script>
+

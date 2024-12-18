@@ -2,7 +2,7 @@
 import Button from "../Button.astro";
 ---
 
-<section id="Txtpaakort" class="min-h-screen flex flex-col items-center justify-center  text-center p-4">
+<section id="Txtpaakort" class="min-h-screen flex flex-col items-center justify-center text-center p-4 ">
   <!-- Overskrift -->
   <h1 class="text-40 font-WindstoneSerif text-blue-500">Skal der en tekst med på kortet?</h1>
   <p class="text-18 font-LivvicRegular text-darkgreyblue-500 mt-2">Herunder kan du skrive din ønskede tekst</p>
@@ -33,48 +33,60 @@ import Button from "../Button.astro";
 </section>
 
 <script>
-  // kort-script.js
   document.addEventListener("DOMContentLoaded", () => {
-    const normaltKortBtn = document.getElementById("normalt-kort");
-    const julekortBtn = document.getElementById("julekort");
+    const normaltKortBtn = document.getElementById("til-normalt-kort");
+    const julekortBtn = document.getElementById("til-julekort");
     const nejBtn = document.getElementById("nej");
     const videreKnap = document.querySelector('a[href="#Kurv"]');
-    const tekstfeltContainer = document.getElementById("tekstfelt-container");
+    const tekstfeltContainer = document.getElementById("Txtpaakort"); // Elementet der skal skjules og vises
 
-    let valgtOption = null; // Holder styr på den valgte mulighed
+    let valgtOption = null;
 
     function visTekstfelt() {
-        tekstfeltContainer?.classList.remove("hidden");
+        if (tekstfeltContainer) {
+          tekstfeltContainer.classList.remove("hidden"); // Vis tekstfeltet
+        }
     }
 
     function skjulTekstfelt() {
-        tekstfeltContainer?.classList.add("hidden");
+        if (tekstfeltContainer) {
+          tekstfeltContainer.classList.add("hidden"); // Skjul tekstfeltet
+        }
     }
 
     normaltKortBtn?.addEventListener("click", () => {
         valgtOption = "normalt-kort";
-        visTekstfelt();
+        visTekstfelt(); // Vis tekstfeltet når normalt kort vælges
         normaltKortBtn.classList.add("bg-denimblue-500", "text-white", "border-none");
         julekortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
         nejBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+
+        // Ændre "Videre"-linket til #Txtpaakort
+        videreKnap.setAttribute("href", "#Txtpaakort");
     });
 
     julekortBtn?.addEventListener("click", () => {
         valgtOption = "julekort";
-        visTekstfelt();
+        visTekstfelt(); // Vis tekstfeltet når julekort vælges
         julekortBtn.classList.add("bg-denimblue-500", "text-white", "border-none");
         normaltKortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
         nejBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+
+        // Ændre "Videre"-linket til #Txtpaakort
+        videreKnap.setAttribute("href", "#Txtpaakort");
     });
 
     nejBtn?.addEventListener("click", () => {
         valgtOption = "nej";
-        skjulTekstfelt();
+        skjulTekstfelt(); // Skjul tekstfeltet når Nej vælges
         nejBtn.classList.add("bg-denimblue-500", "text-white", "border-none");
         normaltKortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
         julekortBtn?.classList.remove("bg-denimblue-500", "text-white", "border-none");
+
+        // Ændre "Videre"-linket til #Kurv
+        videreKnap.setAttribute("href", "#Kurv");
     });
-});
+  });
 </script>
 
 
