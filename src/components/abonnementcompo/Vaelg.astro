@@ -11,8 +11,8 @@ import forudbetalt from '../../assets/images/forudbetalt.svg';
     <!-- TEXT -->
     <div class="class">
         <div class="text-center md:pb-5 ">
-            <h2 class="text-40 pb-9 text-blue-500 font-WindstoneSerif md:text-50 md:pb-6">Vælg et bæredygtigt abonnement</h2>
-            <p class="text-18 px-16 md:text-18 pb-8 font-LivvicRegular text-darkgreyblue-500 md:pb-8">Kunne du tænke dig blomster leveret fast? <br> Med vores abonnement vælger du stilen, og vi sørger for blomsterne – altid en skøn overraskelse. <br> Vælg mellem Classic, Biedermeier eller Scandinavian stil. <br> <span class="font-[700] md:hidden">Swipe for at finde det abonnement, du ønsker</span> </p>
+            <h2 class="introh2 text-40 pb-9 text-blue-500 font-WindstoneSerif md:text-50 md:pb-6">Vælg et bæredygtigt abonnement</h2>
+            <p class="introp text-18 px-16 md:text-18 pb-8 font-LivvicRegular text-darkgreyblue-500 md:pb-8">Kunne du tænke dig blomster leveret fast? <br> Med vores abonnement vælger du stilen, og vi sørger for blomsterne – altid en skøn overraskelse. <br> Vælg mellem Classic, Biedermeier eller Scandinavian stil. <br> <span class="font-[700] md:hidden">Swipe for at finde det abonnement, du ønsker</span> </p>
         </div>
     </div>
 
@@ -21,7 +21,7 @@ import forudbetalt from '../../assets/images/forudbetalt.svg';
         
         <div class="card1 flex-shrink-0 w-[80%] md:w-full flex ml-16 md:ml-0">
             <!-- Card 1 -->
-             <div class="pb-16 pt-4">
+             <div class="pb-16 pt-4 ab1">
                 <div class="grid place-content-center">
                     <Image src={loebende} alt='billede af lille buket blomster' class="w-[300px] h-[300px] rounded-40 md:w-[250px] md:h-[250px] md:rounded-40">
                 </div>
@@ -51,7 +51,7 @@ import forudbetalt from '../../assets/images/forudbetalt.svg';
         </div>
 
     <!-- Card 2 -->
-    <div class="card2 flex-shrink-0 w-[80%] md:w-full">
+    <div class="ab2 card2 flex-shrink-0 w-[80%] md:w-full">
         <!-- Card 2 -->
          <div class="pb-16 pt-4">
             <div class="grid place-content-center ">
@@ -81,19 +81,42 @@ import forudbetalt from '../../assets/images/forudbetalt.svg';
             </div>
          </div>
     </div>
-
-
-    
-
-
-
-
-
-
-
-
- 
 </section>
 
 
 
+<script>
+    import { inView } from "motion";
+        
+        const elementmedanimation1 = document.querySelector(".introh2");
+        
+        inView(elementmedanimation1, () => {
+        
+        elementmedanimation1.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+
+        const elementmedanimation2 = document.querySelector(".introp");
+        
+        inView(elementmedanimation2, () => {
+        
+        elementmedanimation2.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+
+        const elementmedanimation3 = document.querySelector(".ab2");
+        
+        inView(elementmedanimation3, () => {
+        
+        elementmedanimation3.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+
+        const elementmedanimation4 = document.querySelector(".ab1");
+        
+        inView(elementmedanimation4, () => {
+        
+        elementmedanimation4.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+</script>
