@@ -5,13 +5,13 @@ import Button from '../Button.astro';
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
 
-<section class="bg-beige-500 md:pt-20 md:pb-20 flex justify-center flex-col md:gap-0 pt-20 pb-20 font-WindstoneSerif animate__animated animate__fadeInUp animate__delay-0.5s">
-    <h2 class="text-blue-500 text-center md:text-left text-50 font-WindstoneSerif md:ml-24 my-sm">Vores blomstertyper</h2>
+<section class="bg-beige-500 md:pt-20 md:pb-20 flex justify-center flex-col md:gap-0 pt-20 pb-20 font-WindstoneSerif">
+    <h2 class="typerh2 text-blue-500 text-center md:text-left text-50 font-WindstoneSerif md:ml-24 my-sm">Vores blomstertyper</h2>
 
     <div class="flex flex-col justify-center md:flex-row md:gap-28 md:px-20">
         
         <!-- Sektion 1 -->
-        <div class="w-96 mx-auto md:m-6 my-sm d:my-sm" x-data="{ open: false }">
+        <div class="typer1 w-96 mx-auto md:m-6 my-sm d:my-sm" x-data="{ open: false }">
             <!-- Overskrift -->
             <h3 class="text-md text-center text-blue-500 sm:text-lg text-30 md:text-40 md:text-left font-WindstoneSerif mb-sm md:mb-m md:leading-tight text-nowrap">
                 Danske blomster
@@ -39,7 +39,7 @@ import Button from '../Button.astro';
         </div>
 
         <!-- Sektion 2 -->
-        <div class="w-96 mx-auto md:m-0 my-sm md:my-sm" x-data="{ open: false }">
+        <div class="typer2 w-96 mx-auto md:m-0 my-sm md:my-sm" x-data="{ open: false }">
             <!-- Overskrift -->
             <h3 class="text-md text-center text-blue-500 sm:text-lg text-30 md:text-40 md:text-left font-WindstoneSerif mb-sm md:mb-m md:leading-tight text-nowrap">
                 Friske overskudsblomster
@@ -68,7 +68,7 @@ import Button from '../Button.astro';
         
 
         <!-- Sektion 3 -->
-        <div class="w-96 mx-auto md:m-0 my-sm md:my-sm" x-data="{ open: false }">
+        <div class="typer3 w-96 mx-auto md:m-0 my-sm md:my-sm" x-data="{ open: false }">
             <!-- Overskrift -->
             <h3 class="text-md text-center text-blue-500 sm:text-lg text-30 md:text-40 md:text-left font-WindstoneSerif mb-sm md:mb-m md:leading-tight text-nowrap">
                 Certificerede blomster
@@ -97,3 +97,43 @@ import Button from '../Button.astro';
     </div>
 </section>
 
+
+<script>
+    import { inView } from "motion";
+        
+        const elementmedanimation1 = document.querySelector(".typerh2");
+        
+        inView(elementmedanimation1, () => {
+        
+        elementmedanimation1.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+  
+        const elementmedanimation2 = document.querySelector(".typer1");
+        
+        inView(elementmedanimation2, () => {
+        
+        elementmedanimation2.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+  
+        const elementmedanimation3 = document.querySelector(".typer2");
+        
+        inView(elementmedanimation3, () => {
+        
+        elementmedanimation3.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+  
+        const elementmedanimation4 = document.querySelector(".typer3");
+        
+        inView(elementmedanimation4, () => {
+        
+        elementmedanimation4.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+  
+    
+  
+  
+    </script>

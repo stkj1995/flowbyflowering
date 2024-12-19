@@ -11,17 +11,17 @@ import gennemsigtighed from '../../assets/images/gennemsigtighed.webp';
 import Button from "../Button.astro";
 ---
 
-<section class="bg-rosa-500 py-12 px-4 animate__animated animate__fadeInUp animate__delay-0.5s">
+<section class="bg-rosa-500 py-12 px-4">
   <div class="max-w-6xl mx-auto text-center">
     <h2 
       id="section-title"
-      class="text-blue-500 text-40 md:text-50 font-WindstoneSerif mb-10 leading-tight"
+      class="principh2 text-blue-500 text-40 md:text-50 font-WindstoneSerif mb-10 leading-tight"
     >
       Principper til glæde for verden
     </h2>
     <p 
       id="section-description"
-      class="font-LivvicRegular text-18 text-darkgreyblue-500 mb-10 max-w-2xl mx-auto leading-tight"
+      class="principp font-LivvicRegular text-18 text-darkgreyblue-500 mb-10 max-w-2xl mx-auto leading-tight"
     >
       Vores kamp for en bedre verden er ikke kun begrænset til vores blomsterudvalg. Tag en tur gennem vores bæredygtige principper nedenfor, og tilmeld dig vores nyhedsbrev for at følge med i vores rejse, når vi løbende indfører nye tiltag.
     </p>
@@ -90,7 +90,7 @@ import Button from "../Button.astro";
   </div>
 
   <!-- CTA Knappen -->
-  <div class="text-center mt-12">
+  <div class="principknap text-center mt-12">
     <Button 
       textMobile="Skræddersy dit abonnement"
       textDesktop="Skræddersy dit blomsterabonnement her"
@@ -103,20 +103,32 @@ import Button from "../Button.astro";
   </div>
 </section>
 
-<!-- <script>
-  import { animate } from '@motionone/dom';
 
-  document.addEventListener("DOMContentLoaded", () => {
-    // Animér sektionstitel
-    animate("#section-title", { opacity: [0, 1], translate: [-30, 0] }, { duration: 0.8 });
+<script>
+  import { inView } from "motion";
+      
+      const elementmedanimation1 = document.querySelector(".principh2");
+      
+      inView(elementmedanimation1, () => {
+      
+      elementmedanimation1.classList.add("animate__animated", "animate__fadeInUp");
+      
+      }); 
 
-    // Animér sektionbeskrivelse
-    animate("#section-description", { opacity: [0, 1], translate: [-20, 0] }, { duration: 0.8, delay: 0.2 });
+      const elementmedanimation2 = document.querySelector(".principp");
+      
+      inView(elementmedanimation2, () => {
+      
+      elementmedanimation2.classList.add("animate__animated", "animate__fadeInUp");
+      
+      }); 
 
-    // Animér kort
-    const cards = document.querySelectorAll(".card");
-    cards.forEach((card, index) => {
-      animate(card, { opacity: [0, 1], translate: [30, 0] }, { duration: 0.8, delay: index * 0.2 });
-    });
-  });
-</script> -->
+      const elementmedanimation3 = document.querySelector(".principknap");
+      
+      inView(elementmedanimation3, () => {
+      
+      elementmedanimation3.classList.add("animate__animated", "animate__fadeInUp");
+      
+      }); 
+
+  </script>
