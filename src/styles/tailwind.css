@@ -3,21 +3,18 @@
 @tailwind utilities;
 
 @layer base {
-  /* WindStone overskrift*/
-  @font-face {
-    font-family: 'WindStoneSerif';
-    src: url('/fonts/WindStoneSerifPersonalUseRegular.woff') format('woff'); /* skriv: font-WindstoneSerif */
-    font-weight: 400;
-    font-style: normal;
+/* WindStoneSerif Font */
+@font-face {
+  font-family: 'WindStoneSerif';
+  src: url('/fonts/WindStoneSerifPersonalUseRegular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 
-  /* WindStoneSerif Uppercase Font */
-  @font-face {
-    font-family: 'WindStoneSerif';
-    src: url('/fonts/WindStoneSerifPersonalUseRegular.woff') format('woff'); /* skriv: font-WindstoneSerif uppercase */
-    font-weight: 400;
-    font-style: normal;
-    text-transform: uppercase; /* uppercase */
+/* Uppercase WindStoneSerif font */
+.uppercase-text {
+  font-family: 'WindStoneSerif', serif;
+  text-transform: uppercase;
 }
 
 /* Livvic Font */
