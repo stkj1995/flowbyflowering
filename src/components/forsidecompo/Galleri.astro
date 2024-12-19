@@ -13,8 +13,8 @@ import galleri10 from '../../assets/images/galleri10.webp'
 
 ---
 <section class="py-20 md:px-32">
-<h2 class="text-center md:text-left text-40 md:text-50 font-WindstoneSerif text-blue-500 mb-8">Få et indblik i vores univers</h2>
-<p class="text-center md:text-left  text-darkgreyblue-500 font-LivvicRegular text-18 md:text-18">Vi binder mange fine buketter hver dag, og her kan du få et lille indblik i hvordan buketterne kan se ud.</p>
+<h2 class="galleri2 text-center md:text-left text-40 md:text-50 font-WindstoneSerif text-blue-500 mb-8">Få et indblik i vores univers</h2>
+<p class="gallerip text-center md:text-left  text-darkgreyblue-500 font-LivvicRegular text-18 md:text-18">Vi binder mange fine buketter hver dag, og her kan du få et lille indblik i hvordan buketterne kan se ud.</p>
 
 <div class="grid px-5 pt-5 gap-5 md:grid-cols-4 md:grid-rows-3 md:gap-4 md:py-14">
 <Image src={galleri1} alt='pige med buket' class="galleri1 h-80 md:h-[324px] md:w-[415px] object-cover rounded-3xl"/>
@@ -44,4 +44,20 @@ import galleri10 from '../../assets/images/galleri10.webp'
             });
         }
     }
+
+    const elementmedanimation1 = document.querySelector(".gallerih2");
+        
+        inView(elementmedanimation1, () => {
+        
+        elementmedanimation1.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+
+        const elementmedanimation2 = document.querySelector(".gallerip");
+        
+        inView(elementmedanimation2, () => {
+        
+        elementmedanimation2.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
     </script>
