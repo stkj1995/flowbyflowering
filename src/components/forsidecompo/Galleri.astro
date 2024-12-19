@@ -17,8 +17,8 @@ import galleri10 from '../../assets/images/galleri10.webp'
 <p class="text-center md:text-left  text-darkgreyblue-500 font-LivvicRegular text-18 md:text-18">Vi binder mange fine buketter hver dag, og her kan du få et lille indblik i hvordan buketterne kan se ud.</p>
 
 <div class="grid px-5 pt-5 gap-5 md:grid-cols-4 md:grid-rows-3 md:gap-4 md:py-14">
-<Image src={galleri1} alt='pige med buket' class="h-80 md:h-[324px] md:w-[415px] object-cover rounded-3xl"/>
-<Image src={galleri2} alt='buket' class="h-80 md:h-[324px] md:w-[386px] object-cover rounded-3xl"/>
+<Image src={galleri1} alt='pige med buket' class="galleri1 h-80 md:h-[324px] md:w-[415px] object-cover rounded-3xl"/>
+<Image src={galleri2} alt='buket' class="galleri2 h-80 md:h-[324px] md:w-[386px] object-cover rounded-3xl"/>
 <Image src={galleri3} alt='pige med buket' class="h-80 md:h-[647px] md:w-[326px] object-cover rounded-3xl row-span-2"/>
 <Image src={galleri4} alt='pige med buket' class="h-80 md:h-[324px] md:w-[389px] object-cover rounded-3xl"/>
 <Image src={galleri5} alt='pige med buket' class="h-80 md:h-[647px] md:w-[306px] object-cover rounded-3xl row-span-2"/>
@@ -30,3 +30,16 @@ import galleri10 from '../../assets/images/galleri10.webp'
 </div>
 
 </section>
+
+<script>
+import { inView } from "motion";
+	
+	const elementmedanimation1 = document.querySelector(".galleri1");
+	
+	inView(elementmedanimation1, () => {
+	
+	elementmedanimation1.classList.add("animate__animated", "animate__fadeInUp");
+	
+	}); 
+	
+</script>
