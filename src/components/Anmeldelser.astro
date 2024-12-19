@@ -1,6 +1,6 @@
 <section class="bg-beige-500 px-10 md:px-28 py-20">
 
-    <h2 class="text-center md:text-left text-40 md:text-50 font-WindstoneSerif text-blue-500 mb-8">
+    <h2 class="anmeldelserh2 text-center md:text-left text-40 md:text-50 font-WindstoneSerif text-blue-500 mb-8">
       Se vores flotte anmeldelser - Vi er fremragende på Trustpilot
     </h2>
   
@@ -57,3 +57,17 @@
   </section>
 
   
+  <script>
+    import { inView } from "motion";
+    
+
+    const elementmedanimation1 = document.querySelector(".anmeldelserh2");
+        
+        inView(elementmedanimation1, () => {
+        
+        elementmedanimation1.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+
+
+    </script>

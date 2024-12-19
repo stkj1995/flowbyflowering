@@ -4,29 +4,14 @@ import hero2 from '../../assets/images/baeredygtig-hero.webp'
 import scoll_pil from '../../assets/images/scoll_pil.webp'
 ---
 
-<section class="w-full md:h-[800px]">
 
-    <div class="w-screen h-screen object-cover md:w-screen md:object-cover">
-        <!-- Billedet -->
-        <Image 
-            src={hero2} 
-            alt='billede af hvid blomst' 
-            class="w-full h-full md:w-full md:h-[800px] md:object-cover" 
-            style="object-position: 3 -60px;" 
-        />
-    </div>
-    
-    <!-- Tekst -->
-    <div class="absolute w-screen top-52 pl-20 text-blue-500">
-        <h1 class="py-8 pb-10 md:pr-44 md:pl-10 text-50 md:text-200 font-WindstoneSerif leading-tight md:leading-tight">Bæredygtighed</h2>
-        <h2 class="pr-24 text-40 md:text-50 md:pr-48 md:relative md:left-10 md:-top-10 font-WindstoneSerif leading-tight md:leading-tight">Vores livsmål er, at glæden ved at sende blomster også skal være til glæde for verden og naturen</h2>
-    </div>
-
-    <a href="#Topafsnit2">
-        <!-- pil ned -->
-        <div class="absolute left-1/2 top-[700px] transform -translate-x-1/2 md:top-[90%] md:-translate-y-1/2">
-            <Image src={scoll_pil} alt='billede af pil med cirkel rundt om' class="transition-transform duration-700 ease-in-out hover:scale-125">
-        </div>
-    </a>
-    </div>
-</section>
+<div class="relative">
+    <Image 
+              src={hero2} alt='billede af grøn blomst' class="max-h-[600px] md:w-screen object-cover"/>
+  
+  <div class="absolute inset-0 md:ml-16 md:mt-20 m-20 mt-52 md:m-0">
+  <h1 class="text-50 md:text-200 font-WindstoneSerif md:mb-[-40px] mb-10 text-blue-500">Bæredygtighed</h1>
+  <h2 class="text-40 md:text-50 font-WindstoneSerif text-blue-500">Vores livsmål er, at glæden ved at sende blomster også skal være til glæde for verden og naturen</h2>
+  </div>
+  
+  </div>
